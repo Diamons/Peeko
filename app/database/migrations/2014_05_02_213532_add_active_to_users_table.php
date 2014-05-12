@@ -25,7 +25,10 @@ class AddActiveToUsersTable extends Migration {
 	 */
 	public function down()
 	{
-		//
+		//Undo the active field in the users table
+		Schema::table('users', function(Blueprint $table){
+			$table->dropColumn('active');
+		});
 	}
 
 }

@@ -12,6 +12,7 @@ class AddStores extends Migration {
 	 */
 	public function up()
 	{
+		Schema::dropIfExists('stores');
 		Schema::create('stores', function(Blueprint $table)
 		{
 			$table->increments('id');

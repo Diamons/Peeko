@@ -16,8 +16,8 @@ class ApiController extends BaseController {
 	}
 
 	public function getStores($lat, $long){
-		$store = Store::all();
-		return $store->toJson();
+		$stores = Store::with('promotions')->get();
+		return $stores->toJson();
 	}
 
 }

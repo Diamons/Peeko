@@ -48,18 +48,21 @@
 			$invalidUser->save();
 
 			//Has active = 1
-			$validUser = new User(array(
+			$duplicateUser = new User(array(
 				'email' => 'test@test.com',
 				'password' => Hash::make('first_password'),
 				'active' => 1
 			));
 			
 
-			$this->assertEquals(false, $validUser->save(), 'Duplicate user');
+			$this->assertEquals(false, $duplicateUser->save(), 'Duplicate user');
 
-
-			$validUser->email = 'test2@test.com';
-			$validUser->save();
+			$validUser = new User(array(
+				'email' => 'valid@test.com',
+				'password' => Hash::make('first_password'),
+				'active' => 1
+			));
+			$this->assertEquals(true, $validUser->save(), 'Valid user saved');
 
 			//User with no active can't login
 			$login = $invalidUser->login();

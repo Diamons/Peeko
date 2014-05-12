@@ -86,6 +86,14 @@ header{
 	color: #FFF;
 }
 
+#howitworks{
+	display: none;
+}
+
+#whypeeko{
+	padding: 20px;
+}
+
 .header{
 	color: blue;
 }

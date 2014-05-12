@@ -21,7 +21,7 @@ class HomeController extends BaseController {
 	{	
 		$title = "Home";
 		View::share('title', $title);
-		$this->layout->content = View::make('greeting')->withName('Shahruk');
+		$this->layout->content = View::make('home'); //View::make('greeting')->withName('Shahruk');
 	}
 
 }
