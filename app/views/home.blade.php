@@ -11,7 +11,7 @@
 					<img class="icon" src="/img/icons/appetizer.png" />Free Appetizer with Entree
 				</div>
 				<div class="single-deal animated fadeInDown">
-					<img class="icon" src="/img/icons/lunch.png" /> $4.95 Lunch Special
+					<img class="icon" src="/img/icons/lunch.png" /> $6.95 Lunch Special
 				</div>
 				<div class="single-deal animated fadeInDown">
 					<div class="icon">15%</div> Take 15% Off Your Order
