@@ -21,9 +21,8 @@
 				</div>
 			</div>
 			<div class="about">
-				<p>
-					Peeko is an iPhone app that brings you deals at stores nearby.
-				</p>
+				<p>Peeko is an iPhone app that brings you deals at stores nearby.</p>
+				<p>Businesses offer discounts to local customers to grow their business.</p>
 				<p>No coupons or vouchers to buy beforehand. Simply walk in, present the deal, and redeem.</p>
 				<p>Save money and take advantage of great promotions nearby!</p>
 			</div>
