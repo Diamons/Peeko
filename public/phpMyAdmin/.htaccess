@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "My Protected Area"
-AuthUserFile /var/www/peekoapp.com/public/phpMyAdmin/.htpasswd
-Require valid-user
