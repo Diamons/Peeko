@@ -1,6 +1,6 @@
 <?php
-
-return array(
+$site = $_SERVER['SERVER_NAME'];
+$db = array(
 
 	/*
 	|--------------------------------------------------------------------------
@@ -57,7 +57,7 @@ return array(
 			'host'      => 'localhost',
 			'database'  => 'peekoapi',
 			'username'  => 'root',
-			'password'  => 'root',
+			'password'  => 'aCC23zzzY23',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
@@ -122,3 +122,9 @@ return array(
 	),
 
 );
+
+if($site == "peeko.dev"){
+	$db['connections']['mysql']['password'] = 'root';
+}
+
+return $db;
