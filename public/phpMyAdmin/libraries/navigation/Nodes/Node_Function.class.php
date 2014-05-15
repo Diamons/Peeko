@@ -9,12 +9,14 @@ if (! defined('PHPMYADMIN')) {
     exit;
 }
 
+require_once 'libraries/navigation/Nodes/Node_DatabaseChild.class.php';
+
 /**
  * Represents a function node in the navigation tree
  *
  * @package PhpMyAdmin-Navigation
  */
-class Node_Function extends Node
+class Node_Function extends Node_DatabaseChild
 {
     /**
      * Initialises the class
@@ -29,7 +31,7 @@ class Node_Function extends Node
     public function __construct($name, $type = Node::OBJECT, $is_group = false)
     {
         parent::__construct($name, $type, $is_group);
-        $this->icon  = PMA_Util::getImage('b_routines.png');
+        $this->icon  = PMA_Util::getImage('b_routines.png', __('Function'));
         $this->links = array(
             'text' => 'db_routines.php?server=' . $GLOBALS['server']
                     . '&amp;db=%2$s&amp;item_name=%1$s&amp;item_type=FUNCTION'
@@ -39,6 +41,16 @@ class Node_Function extends Node
                     . '&amp;export_item=1&amp;token=' . $GLOBALS['token']
         );
         $this->classes = 'function';
+    }
+
+    /**
+     * Returns the type of the item represented by the node.
+     *
+     * @return string type of the item
+     */
+    protected function getItemType()
+    {
+        return 'function';
     }
 }
 
