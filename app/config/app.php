@@ -1,6 +1,6 @@
 <?php
 
-return array(
+$app = array(
 
 	/*
 	|--------------------------------------------------------------------------
@@ -13,7 +13,7 @@ return array(
 	|
 	*/
 
-	'debug' => true,
+	'debug' => false,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -26,7 +26,7 @@ return array(
 	|
 	*/
 
-	'url' => 'http://peeko.dev',
+	'url' => 'http://peekoapp.com',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -190,3 +190,10 @@ return array(
 	),
 
 );
+
+$site = $_SERVER['SERVER_NAME'];
+
+if($site == "peeko.dev"){
+	$app['debug'] = true;
+	$app['url'] = 'http://peeko.dev';
+}
