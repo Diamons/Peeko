@@ -197,3 +197,5 @@ if($site == "peeko.dev"){
 	$app['debug'] = true;
 	$app['url'] = 'http://peeko.dev';
 }
+
+return $app;
