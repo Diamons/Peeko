@@ -25,6 +25,11 @@
 		<a href="/" id="logo">
 			<img src="/img/peeko.png" />
 		</a>
+		<nav id="mainMenu">
+			<ul>
+				<li><a href="/business">For Business</a></li>
+			</ul>
+		</nav>
 		@yield('content')
 	</div>
 {{ HTML::script('http://code.jquery.com/jquery-2.1.0.min.js'); }}

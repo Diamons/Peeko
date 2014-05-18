@@ -91,3 +91,28 @@ img{
 .free.icon{
 	background: #01a8cc;
 }
+
+/* Thursday May 15, 2014 */
+
+#logo{
+	float: left;
+	margin: 5px 0;
+}
+
+#mainMenu{
+	float: right;
+	margin-right: 6px;
+}
+
+#mainMenu ul{
+	list-style: none;
+	margin-top: 5em;
+	font-family: "Montserrat" sans-serif;
+}
+
+#mainMenu a{
+	text-decoration: none;
+	font-size: 14pt;
+	color: #666;
+	text-transform: lowercase;
+}

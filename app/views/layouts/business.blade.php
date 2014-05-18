@@ -11,24 +11,26 @@
 <body>
 	<div id="container">
 	<header class="clearfix">
-		<a id="logo" href="/"><img src="/img/peeko.png" alt="Peeko Logo" /></a>
-		<a id="register" href="/business/register" class="pretty-button">Signup for Business</a>
-		<div id="loginForm">
-			@if(Session::has('error'))
-				<div class="alert-box error">
-					<strong>{{ Session::get('error') }}</strong>
-				</div>
-			@endif
-			{{ Form::open(array('url' => 'business/login')); }}
-			<?php 
-				echo Form::token();
-				//echo Form::label('email', 'E-Mail Address');
-				echo Form::email('email', NULL, array('id' => 'email', 'class' => 'form-control', 'placeholder' => 'E-mail Address'));
-				//echo Form::label('password', 'Password');
-				echo Form::password('password', array('id' => 'password', 'class' => 'form-control', 'placeholder' => 'Password'));
-				echo Form::submit('Login', array('class' => 'btn btn-default'));
-			?>
-			{{ Form::close(); }}
+		<div class="wrap">
+			<a id="logo" href="/"><img src="/img/peeko.png" alt="Peeko Logo" /></a>
+			<a id="register" href="/business/register" class="pretty-button">Signup for Business</a>
+			<div id="loginForm">
+				@if(Session::has('error'))
+					<div class="alert-box error">
+						<strong>{{ Session::get('error') }}</strong>
+					</div>
+				@endif
+				{{ Form::open(array('url' => 'business/login')); }}
+				<?php 
+					echo Form::token();
+					//echo Form::label('email', 'E-Mail Address');
+					echo Form::email('email', NULL, array('id' => 'email', 'class' => 'form-control', 'placeholder' => 'E-mail Address'));
+					//echo Form::label('password', 'Password');
+					echo Form::password('password', array('id' => 'password', 'class' => 'form-control', 'placeholder' => 'Password'));
+					echo Form::submit('Login', array('class' => 'btn btn-default'));
+				?>
+				{{ Form::close(); }}
+			</div>
 		</div>
 	</header>
 	<div id="content">

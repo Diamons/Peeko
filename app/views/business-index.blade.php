@@ -1,25 +1,29 @@
 @extends('layouts.business')
 @section('content')
 <div id="forbusiness" class="clear padded">
-	<img id="store" src="/img/marker.png" />
-	<h1>Attract Local Customers</h1>
+	<div class="wrap">
+		<img id="store" src="/img/marker.png" />
+		<h1>Attract Local Customers</h1>
 
-	<h4>Generate more business with no extra work</h4>
+		<h4>Generate more business with no extra work</h4>
 
-	<h4>Reach thousands of new people locally</h4>
+		<h4>Reach thousands of new people locally</h4>
 
-	<h4>Market on social media automatically</h4>
+		<h4>Market on social media automatically</h4>
 
-	<h4>All with no tools or management needed</h4>
+		<h4>All with no tools or management needed</h4>
+	</div>
 </div>
 <div id="whypeeko">
-	<h2>Why Peeko?</h2>
-	<p class="description">
-		Peeko is a shopping network that brings the world around you straight to your smartphone. Suddenly every street turns into a personal shopping experience. 
-	</p>
-	<div class="row">
-		<div class="col-xs-3">
-			Shop Local
+	<div class="wrap">
+		<h2>Why Peeko?</h2>
+		<p class="description">
+			Peeko offers a deal to 
+		</p>
+		<div class="row">
+			<div class="col-xs-3">
+				
+			</div>
 		</div>
 	</div>
 </div>
@@ -31,7 +35,7 @@
 			1. Offer a deal or promotion for your store on the Peeko platform
 		</div>
 		<div class="col-xs-3">
-			2. Local users see your store and promotion nearby
+			2. Users see your store and promotion nearby
 		</div>
 		<div class="col-xs-3">
 			3. Customers come and visit your store
