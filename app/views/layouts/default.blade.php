@@ -3,6 +3,7 @@
 <head>
 <title>{{ $title }} - Peeko</title>
 {{ HTML::style('//fonts.googleapis.com/css?family=Montserrat:400,700'); }}
+<link href='http://fonts.googleapis.com/css?family=Muli:300,400' rel='stylesheet' type='text/css'>
 {{ HTML::style('//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css'); }}
 {{ HTML::style('css/stylesheet.css'); }}
 {{ HTML::style('css/animate.css'); }}
@@ -11,7 +12,7 @@
 
 </head>
 <body>
-	<div id="container">
+	<div id="container" class="wrap">
 		<?php
 		/*<header>
 			<a href="/" id="logo">

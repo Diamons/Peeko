@@ -4,8 +4,18 @@ body{
 	background: #FFF;
 }
 
+img{
+	max-width: 100%;
+	height: auto;
+	display: block;
+	margin: auto;
+}
 header{
 	position: relative;
+}
+
+h1,h2{
+	font-family: "Montserrat", sans-serif;
 }
 
 #container{
@@ -30,6 +40,7 @@ header{
 
 #loginForm{
 	float: right;
+	margin-top: 20px;
 } 
 
 #email, #password{
@@ -43,7 +54,7 @@ header{
 
 #register{
 	float: right;
-	margin-top: 5px;
+	margin-top: 25px;
 	margin-left: 8px;
 }
 
@@ -69,11 +80,13 @@ header{
 	background: url('/img/map.png') 0 -10px;
 	background-size: 100% auto;
 	color: #FFF;
-	padding: 100px;
+	padding: 20px 40px;
 }
 
+
 #store{
-	float: right;
+	display: block;
+	margin: auto;
 	width: 200px;
 	height: auto;
 }
@@ -101,8 +114,28 @@ header{
 	color: #FFF;
 }
 
+#forbusiness h1{
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+#forbusiness h4{
+	font-size: 12pt;
+}
+
+#forbusiness .row{
+	text-align: center;
+	margin-bottom: 30px;
+}
+
 .header{
 	color: blue;
+}
+
+.whypeekoimage{
+	width: 75%;
+	margin: auto;
+	margin-top: 25px;
 }
 
 .pretty-button {

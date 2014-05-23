@@ -1,0 +1,97 @@
+#loginForm > .alert-box.error{
+	margin-top: -20px;
+	color: red;
+}
+
+#whypeeko{
+	background: url(/img/food.png);
+}
+
+body{
+	font-family: 'Muli', sans-serif;
+}
+
+#menu{
+	float: left;
+	list-style: none;
+	margin-left: 10px;
+	margin-top: 25px;
+}
+
+#menu > li{
+	float: left;
+}
+
+#menu a{
+	display: block;
+	font-size: 12pt;
+	margin-right: 10px;
+	text-decoration: none;
+	padding: 5px 10px;
+	transition: .3s;
+	-webkit-transition: .3s;
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+#menu a:hover{
+	background: #ffa42f;
+	color: #FFF;
+}
+
+h1{
+	text-align: center;
+}
+
+.pretty-button.large{
+	font-size: 32pt;
+	font-family: 'Muli', sans-serif;
+	padding: 10px 24px;
+	display: table;
+	margin: 10px auto 40px;
+}
+
+#faq{
+	background: #FAFAFA url('/img/giftly.png');
+}
+.question-container{
+	background: #FFF;
+	padding: 8px 12px;
+	font-size: 1.1em;
+	margin-bottom: 20px;
+	border-radius: 5px;
+}
+.question{
+	margin-bottom: 2px;
+	color: #0c8bdb;
+}
+
+.answer{
+	margin-bottom: 2px;
+}
+
+#pricing{
+	color: #FFF;
+	background: url('/img/stardust.png');
+}
+
+.icons-container{
+	margin-top: 40px;
+}
+
+.icon{
+	width: 128px;
+	height: auto;
+	display: block;
+	margin: auto;
+}
+
+.features-container{
+	margin-bottom: 40px;
+}
+
+.price{
+	color: #7ed0e8;
+	font-size: 32pt;
+	text-align: center;
+}

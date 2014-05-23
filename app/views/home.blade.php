@@ -21,6 +21,7 @@
 				</div>
 			</div>
 			<div class="about">
+				<img src="/img/iosappstore.png" class="iosappstore" alt="Peeko Coming Soon to the iTunes App Store for iPhone" />
 				<p>Peeko is an iPhone app that brings you deals at stores nearby.</p>
 				<p>Businesses offer discounts to local customers to grow their business.</p>
 				<p>No coupons or vouchers to buy beforehand. Simply walk in, present the deal, and redeem.</p>

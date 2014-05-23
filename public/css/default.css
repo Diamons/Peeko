@@ -6,6 +6,17 @@ header{
 	padding: 40px 0;
 }
 
+
+.wrap{
+	width: 1140px;
+	margin: auto;
+}
+
+#container{
+	width: 980px;
+	margin: auto;
+}
+
 #logo{
 	display: block;
 	margin: 20px 0;
@@ -115,4 +126,10 @@ img{
 	font-size: 14pt;
 	color: #666;
 	text-transform: lowercase;
+}
+
+.iosappstore{
+	width: 350px;
+	height: auto;
+	margin: auto;
 }

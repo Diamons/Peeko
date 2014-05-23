@@ -27,4 +27,11 @@
 			View::share('title', $title);
 			$this->layout->content = View::make('business-register');
 		}
+		/*
+		public function getPricing(){
+			$title = "Pricing Plans";
+			View::share('title', $title);
+			$this->layout->content = View::make('business-pricing');
+		}
+		*/
 	}

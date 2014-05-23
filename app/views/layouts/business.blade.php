@@ -2,10 +2,12 @@
 <html>
 <head>
 <title>{{ $title }} - Peeko</title>
-
+{{ HTML::style('//fonts.googleapis.com/css?family=Montserrat:400,700'); }}
+<link href='http://fonts.googleapis.com/css?family=Muli:300,400' rel='stylesheet' type='text/css'>
 {{ HTML::style('//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css'); }}
+{{ HTML::style('//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css'); }}
 {{ HTML::style('css/stylesheet.css'); }}
-
+{{ HTML::style('css/business.css'); }}
 
 </head>
 <body>
@@ -13,6 +15,12 @@
 	<header class="clearfix">
 		<div class="wrap">
 			<a id="logo" href="/"><img src="/img/peeko.png" alt="Peeko Logo" /></a>
+			<ul id="menu">
+				<li><a href="#">Benefits</a></li>
+				<li><a href="#">FAQ</a></li>
+				<li><a href="/business/pricing">Pricing</a></li>
+				<li><a href="#">Support</a></li>
+			</ul>
 			<a id="register" href="/business/register" class="pretty-button">Signup for Business</a>
 			<div id="loginForm">
 				@if(Session::has('error'))
