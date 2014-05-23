@@ -1,6 +1,10 @@
 @extends('layouts.business')
 @section('content')
 <div id="forbusiness" class="clear padded">
+	<img style="top: 230px; left: 140px;" src="/img/outside1.jpg" class="map-icon" />
+	<img style="top: 320px; right: 300px;" src="/img/outside2.jpg" class="map-icon" />
+	<img style="left: 70%; bottom: 340px;" src="/img/outside3.jpg" class="map-icon" />
+	<img style="left: 540px;" src="/img/outside4.jpg" class="map-icon" />
 	<div class="wrap">
 		<h1>Reach New Local Customers</h1>
 		<img id="store" src="/img/marker.png" />
@@ -103,7 +107,7 @@
 	<div class="wrap">
 		<h3>Pricing</h3>
 		<div class="price">No contracts. Only $399/month.</div>
-		<a href="#" class="pretty-button large">Get Started<br /><span style="font-size: 14px;margin-top:-5px;text-align:center; display: block;">Schedule a Free Consultation</span></a>
+		<a href="/business/support" class="pretty-button large">Get Started<br /><span style="font-size: 14px;margin-top:-5px;text-align:center; display: block;">Schedule a Free Consultation</span></a>
 		<div class="description">
 			Grow your business the smarter way with Peeko. There's no contracts - if you're unsatisfied for any reason simple cancel your service and never pay a dime again. That's how much we believe Peeko can help your business grow.
 		</div>

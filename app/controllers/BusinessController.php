@@ -27,11 +27,11 @@
 			View::share('title', $title);
 			$this->layout->content = View::make('business-register');
 		}
-		/*
-		public function getPricing(){
-			$title = "Pricing Plans";
+		
+		public function getSupport(){
+			$title = "Support";
 			View::share('title', $title);
-			$this->layout->content = View::make('business-pricing');
+			$this->layout->content = View::make('business-support');
 		}
-		*/
+		
 	}

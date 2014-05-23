@@ -1,3 +1,11 @@
+/*
+#forbusiness{
+	background: url(/img/outside3.jpg);
+	background-size: auto 100%;
+	min-height: 500px;
+}
+*/
+
 #loginForm > .alert-box.error{
 	margin-top: -20px;
 	color: red;
@@ -5,6 +13,12 @@
 
 #whypeeko{
 	background: url(/img/food.png);
+}
+
+#forbusiness{
+	padding: 50px 20px;
+	background: url(/img/mapbg.png);
+	position: relative;
 }
 
 body{
@@ -94,4 +108,41 @@ h1{
 	color: #7ed0e8;
 	font-size: 32pt;
 	text-align: center;
+}
+
+.map-icon{
+	width: 128px;
+	height: 128px;
+	border-radius: 64px;
+	overflow: hidden;
+	position: absolute;
+	background: #ff6600;
+	padding: 20px;
+	-webkit-animation: blinking 2s infinite;
+	animation: blinking 2s infinite;
+	transition: .2s all;
+	-webkit-transition: .2s all;
+}
+
+.map-icon:hover{
+	cursor: pointer;
+	width: 400px;
+	height: auto;
+
+}
+
+@-webkit-keyframes blinking{
+	0% {-webkit-transform: scale(1, 1); opacity: 0.7;}
+    50% {-webkit-transform: scale(1.1, 1.1); opacity: 1.0;}
+    100% {-webkit-transform: scale(1,1); opacity: 0.7;}
+}
+@keyframes blinking{
+	0%{
+		background: #ff6600;
+		padding: 20px;
+	}
+	100%{
+		background: #fca35c;
+		padding: 20px;
+	}
 }

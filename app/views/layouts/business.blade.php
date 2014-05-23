@@ -16,12 +16,12 @@
 		<div class="wrap">
 			<a id="logo" href="/"><img src="/img/peeko.png" alt="Peeko Logo" /></a>
 			<ul id="menu">
-				<li><a href="#">Benefits</a></li>
-				<li><a href="#">FAQ</a></li>
-				<li><a href="/business/pricing">Pricing</a></li>
-				<li><a href="#">Support</a></li>
+				<li><a href="#whypeeko">Benefits</a></li>
+				<li><a href="#faq">FAQ</a></li>
+				<li><a href="#pricing">Pricing</a></li>
+				<li><a href="/business/support">Support</a></li>
 			</ul>
-			<a id="register" href="/business/register" class="pretty-button">Signup for Business</a>
+			<a id="register" href="/business/support" class="pretty-button">Signup for Business</a>
 			<div id="loginForm">
 				@if(Session::has('error'))
 					<div class="alert-box error">
