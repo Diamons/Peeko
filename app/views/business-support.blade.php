@@ -2,6 +2,24 @@
 
 @section('content')
 <div id="content" class="wrap">
-	<iframe height="818" allowTransparency="true" frameborder="0" scrolling="no" style="width:100%;border:none"  src="https://fusionfx.wufoo.com/embed/zvbq1no1wtvcl6/"><a href="https://fusionfx.wufoo.com/forms/zvbq1no1wtvcl6/">Fill out my Wufoo form!</a></iframe></div>
+	<div id="wufoo-zvbq1no1wtvcl6">
+Fill out my <a href="https://fusionfx.wufoo.com/forms/zvbq1no1wtvcl6">online form</a>.
+</div>
+<script type="text/javascript">var zvbq1no1wtvcl6;(function(d, t) {
+var s = d.createElement(t), options = {
+'userName':'fusionfx',
+'formHash':'zvbq1no1wtvcl6',
+'autoResize':true,
+'height':'1062',
+'async':true,
+'host':'wufoo.com',
+'header':'show',
+'ssl':true};
+s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'wufoo.com/scripts/embed/form.js';
+s.onload = s.onreadystatechange = function() {
+var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
+try { zvbq1no1wtvcl6 = new WufooForm();zvbq1no1wtvcl6.initialize(options);zvbq1no1wtvcl6.display(); } catch (e) {}};
+var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
+})(document, 'script');</script>
 </div>
 @stop
