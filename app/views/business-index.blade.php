@@ -3,7 +3,7 @@
 <div id="forbusiness" class="clear padded">
 	<img style="top: 230px; left: 140px;" class="map-icon" src="/img/outside1.jpg" />
 	<img style="top: 320px; right: 300px;" class="map-icon" src="/img/outside2.jpg" />
-	<img style="left: 70%; bottom: 340px;" class="map-icon" src="/img/outside3.jpg" />
+	<img style="left: 65%; bottom: 340px;" class="map-icon" src="/img/outside3.jpg" />
 	<img style="left: 40px;" class="map-icon" class="map-icon" src="/img/outside4.jpg" />
 
 
