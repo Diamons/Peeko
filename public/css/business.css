@@ -18,6 +18,7 @@
 #forbusiness{
 	padding: 50px 20px;
 	background: url(/img/mapbg.png);
+	background-position: -90px;
 	position: relative;
 }
 
@@ -115,13 +116,18 @@ h1{
 	height: 128px;
 	border-radius: 64px;
 	overflow: hidden;
+	-webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
 	position: absolute;
-	background: #ff6600;
-	padding: 20px;
+	border: 10px solid #ff6600;
 	-webkit-animation: blinking 2s infinite;
 	animation: blinking 2s infinite;
 	transition: .2s all;
 	-webkit-transition: .2s all;
+}
+
+.map-icon > img{
+	width: 100%;
+	height: 100%;
 }
 
 .map-icon:hover{
@@ -137,9 +143,9 @@ h1{
 }
 
 @-webkit-keyframes blinking{
-	0% {-webkit-transform: scale(1, 1); opacity: 0.7;}
-    50% {-webkit-transform: scale(1.1, 1.1); opacity: 1.0;}
-    100% {-webkit-transform: scale(1,1); opacity: 0.7;}
+	0% {opacity: 0.7; }
+    50% {opacity: 1.0; border-width: 15px;}
+    100% {opacity: 0.7; border-width: 10px;}
 }
 @keyframes blinking{
 	0%{
