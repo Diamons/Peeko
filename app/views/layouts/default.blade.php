@@ -13,6 +13,7 @@
 </head>
 <body>
 	<div id="container" class="wrap">
+		<div class="clearfix">
 		<?php
 		/*<header>
 			<a href="/" id="logo">
@@ -31,6 +32,7 @@
 				<li><a href="/business">For Business</a></li>
 			</ul>
 		</nav>
+		</div>
 		@yield('content')
 	</div>
 {{ HTML::script('http://code.jquery.com/jquery-2.1.0.min.js'); }}
