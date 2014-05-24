@@ -4,6 +4,7 @@
 <title>{{ $title }} - Peeko</title>
 {{ HTML::style('//fonts.googleapis.com/css?family=Montserrat:400,700'); }}
 <link href='http://fonts.googleapis.com/css?family=Muli:300,400' rel='stylesheet' type='text/css'>
+<meta name="viewport" content="1280, initial-scale=1.0">
 {{ HTML::style('//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css'); }}
 {{ HTML::style('//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css'); }}
 {{ HTML::style('css/stylesheet.css'); }}

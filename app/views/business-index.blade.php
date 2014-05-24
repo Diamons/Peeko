@@ -4,7 +4,7 @@
 	<img style="top: 230px; left: 140px;" src="/img/outside1.jpg" class="map-icon" />
 	<img style="top: 320px; right: 300px;" src="/img/outside2.jpg" class="map-icon" />
 	<img style="left: 70%; bottom: 340px;" src="/img/outside3.jpg" class="map-icon" />
-	<img style="left: 540px;" src="/img/outside4.jpg" class="map-icon" />
+	<img style="left: 40px;" src="/img/outside4.jpg" class="map-icon" />
 	<div class="wrap">
 		<h1>Reach New Local Customers</h1>
 		<img id="store" src="/img/marker.png" />

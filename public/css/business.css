@@ -126,14 +126,14 @@ h1{
 
 .map-icon:hover{
 	cursor: pointer;
-	width: 400px;
+	width: 290px;
 	height: auto;
 
 }
 
 .wrap{
 	width: 100%;
-	
+
 }
 
 @-webkit-keyframes blinking{
