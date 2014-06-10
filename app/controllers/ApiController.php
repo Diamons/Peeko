@@ -17,7 +17,7 @@ class ApiController extends BaseController {
 
 	public function getIndex(){
 		$redirect = Input::get('r');
-		return Redirect::to('http://'.$redirect);
+		return Redirect::to($redirect);
 	}
 
 	public function getStores($lat, $long){
