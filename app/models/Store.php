@@ -19,7 +19,13 @@ class Store extends Eloquent {
 		$store->icon = "/stores/".$id."/icon.png";
 		$store->address = $address;
 		$input['promotion']['image'] = "/stores/".$id."/banner.jpg";
-		$input['promotion']['menu'] = "/stores/".$id."/menu.jpg";
+
+		if(empty($input['website'])){
+			$input['promotion']['menu'] = "/stores/".$id."/menu.jpg";
+		}else{
+			$input['promotion']['menu'] = "/api?r=".$input['website'];
+		}
+		
 
 		$store->save();
 

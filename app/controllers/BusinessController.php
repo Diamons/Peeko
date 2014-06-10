@@ -59,7 +59,7 @@
 			$input = Input::get();
 			$store = new Store($input);
 			$store->addStore($input);
-
+			return Redirect::to('/business/dashboard');
 		}
 		
 	}

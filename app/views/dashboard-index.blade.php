@@ -16,7 +16,7 @@
 				</td>
 				<?php $promotion = $stores[$i]['promotions']; ?>
 				<td>
-					<img class="banner small" src="/<?php echo $promotion[0]->image; ?>" alt="<?php echo $promotion[0]->name; ?>" />
+					<img class="banner small" src="<?php echo $promotion[0]->image; ?>" alt="<?php echo $promotion[0]->name; ?>" />
 					<p><b><?php echo $promotion[0]->name; ?></b></p>
 					<p>
 						<?php echo $promotion[0]->description; ?>
