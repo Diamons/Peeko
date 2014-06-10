@@ -1,5 +1,5 @@
 <?php
-$site = $_SERVER['SERVER_NAME'];
+
 $db = array(
 
 	/*
@@ -57,7 +57,7 @@ $db = array(
 			'host'      => 'localhost',
 			'database'  => 'peekoapi',
 			'username'  => 'root',
-			'password'  => 'aCC23zzzY23',
+			'password'  => 'root',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
@@ -123,8 +123,11 @@ $db = array(
 
 );
 
-if($site == "peeko.dev"){
-	$db['connections']['mysql']['password'] = 'root';
+if(isset($_SERVER['SERVER_NAME'])){
+	$site = $_SERVER['SERVER_NAME'];
+	if($site == "peekoapp.com"){
+		$db['connections']['mysql']['password'] = 'aCC23zzzY23';
+	}
 }
 
 return $db;

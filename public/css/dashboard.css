@@ -1,0 +1,38 @@
+.dashboard{
+	border: 2px solid #22c7ff;
+	border-radius: 9px;
+	padding: 20px;
+	background: #F2FAFA;
+}
+
+.listings{
+	width: 100%;
+}
+
+.listings th{
+	font-size: 16pt;
+	font-family: 'Montserrat';
+	text-align: center;
+}
+
+.listings td{
+	width: 30%;
+	text-align: center;
+	padding: 20px 0;
+	border-bottom: 1px solid #EEE;
+}
+
+.listings td:first-child{
+	width: 10%;
+}
+
+.listing .icon{
+	width: 132px;
+	height: auto;
+}
+
+.banner.small{
+	max-width: 250px;
+	height: auto;
+	display: block;
+}

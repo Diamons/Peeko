@@ -19,7 +19,14 @@ class AddStores extends Migration {
 			$table->double('latitude');
 			$table->double('longitude');
 			$table->string('name');
+			$table->string('address');
+			$table->string('city');
+			$table->string('state');
+			$table->double('zipcode');
 			$table->string('icon');
+			$table->string('menu');
+			$table->string('phone');
+			$table->string('website');
 			$table->timestamps();
 		});
 	}

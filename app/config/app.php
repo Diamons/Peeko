@@ -191,11 +191,13 @@ $app = array(
 
 );
 
-$site = $_SERVER['SERVER_NAME'];
+if(isset($_SERVER['SERVER_NAME'])){
+	$site = $_SERVER['SERVER_NAME'];
 
-if($site == "peeko.dev"){
-	$app['debug'] = true;
-	$app['url'] = 'http://peeko.dev';
+	if($site == "peeko.dev"){
+		$app['debug'] = true;
+		$app['url'] = 'http://peeko.dev';
+	}
 }
 
 return $app;

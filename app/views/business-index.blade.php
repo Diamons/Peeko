@@ -76,7 +76,7 @@
 				How much does Peeko cost?
 			</p>
 			<p class="answer">
-				Peeko allows you to target local customers nearby to help grow your business for only $399 a month.
+				Peeko allows you to target local customers nearby to help grow your business absolutely free.
 			</p>
 		</div>
 		<div class="question-container">
@@ -108,10 +108,10 @@
 <div id="pricing" class="padded">
 	<div class="wrap">
 		<h3>Pricing</h3>
-		<div class="price">No contracts. Only $399/month.</div>
+		<div class="price">Simple Pricing. Free.</div>
 		<a href="/business/support" class="pretty-button large">Get Started<br /><span style="font-size: 14px;margin-top:-5px;text-align:center; display: block;">Schedule a Free Consultation</span></a>
 		<div class="description">
-			Grow your business the smarter way with Peeko. There's no contracts - if you're unsatisfied for any reason simple cancel your service and never pay a dime again. That's how much we believe Peeko can help your business grow.
+			Grow your business the smarter way with Peeko. There's no contracts or bills to pay. Setting up a store and listing a deal is completely free.
 		</div>
 		<div class="icons-container container-fluid">
 			<div class="row">
