@@ -21,12 +21,12 @@ class Store extends Eloquent {
 		$input['promotion']['image'] = "/stores/".$id."/banner.jpg";
 
 		if(empty($input['website'])){
-			$input['promotion']['menu'] = "/stores/".$id."/menu.jpg";
+			$store->menu = "/stores/".$id."/menu.jpg";
 		}else{
-			$input['promotion']['menu'] = "/api?r=".$input['website'];
+			$store->menu = "/api?r=".$input['website'];
 		}
 		
-
+		//die(print_r($input));
 		$store->save();
 
 		//Create new promotion
