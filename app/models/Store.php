@@ -11,29 +11,31 @@ class Store extends Eloquent {
 		//var_dump($input);
 		//die();
 		//Append 2nd address together
-		$address = $input['address'].' '.$input['address1'];
-		$this->save();
-		$id = $this->id;
+		if($input['latitude'] > 0){
+			$address = $input['address'].' '.$input['address1'];
+			$this->save();
+			$id = $this->id;
 
-		$store = $this->find($id);
-		$store->icon = "/stores/".$id."/icon.png";
-		$store->address = $address;
-		$input['promotion']['image'] = "/stores/".$id."/banner.jpg";
+			$store = $this->find($id);
+			$store->icon = "/stores/".$id."/icon.png";
+			$store->address = $address;
+			$input['promotion']['image'] = "/stores/".$id."/banner.jpg";
 
-		if(empty($input['website'])){
-			$store->menu = "/stores/".$id."/menu.jpg";
-		}else{
-			$store->menu = "/api?r=".$input['website'];
+			if(empty($input['website'])){
+				$store->menu = "/stores/".$id."/menu.jpg";
+			}else{
+				$store->menu = "/api?r=".$input['website'];
+			}
+			
+			//die(print_r($input));
+			$store->save();
+
+			//Create new promotion
+			$promotion = new Promotion($input['promotion']);
+			$store->promotions()->save($promotion);
+
+			$path = public_path() . '/stores/'.$id.'/';
+			File::makeDirectory($path, $mode = 0775, true, false);
 		}
-		
-		//die(print_r($input));
-		$store->save();
-
-		//Create new promotion
-		$promotion = new Promotion($input['promotion']);
-		$store->promotions()->save($promotion);
-
-		$path = public_path() . '/stores/'.$id.'/';
-		File::makeDirectory($path, $mode = 0775, true, false);
 	}
 }
