@@ -1,0 +1,359 @@
+body, html{
+	position: relative;
+}
+
+body{
+	display: none;
+}
+
+#productOverlay{
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #FFF;
+	overflow-y: scroll;
+	z-index: 100;
+	-webkit-border-radius: 9px;
+	padding: 20px;
+	padding-top: 45px;
+	margin: auto;
+	top: 0; left: 0; bottom: 0; right: 0;
+}
+
+button.close{
+	font-size: 42px;
+}
+
+#productOverlay #productImage{
+	width: 100%;
+	border-radius: 9px;
+}
+
+.gmnoprint{
+	display: none !important;
+}
+
+#map-canvas > div a{
+	display: none;
+}
+
+#productName{
+	text-align: center;
+}
+
+#description{
+	font-size: 12px;
+}
+
+#buyOnline, #share{
+	display: block;
+	font-size: 18px;
+	text-decoration: none;
+	padding: 10px 20px;
+	margin-bottom: 10px;
+}
+
+#buyOnline .glyphicon{
+	display: inline-block;
+}
+
+#locateMe{
+	background: #FFF;
+	position: absolute;
+	left: 12px;
+	bottom: 40px;
+	z-index: 99;
+	font-size: 24px;
+	padding: 10px 10px 4px 10px;
+	transition: all .4s;
+	-webkit-transition: all .4s;
+	-moz-box-shadow: 0 0 5px #888;
+	-webkit-box-shadow: 0 0 5px#888;
+	box-shadow: 0 0 5px #888;
+}
+
+#locateMe:hover{
+	color: #5aa8ff;
+	-moz-box-shadow: 0 0 5px #5aa8ff;
+	-webkit-box-shadow: 0 0 5px #5aa8ff;
+	box-shadow: 0 0 5px #5aa8ff;
+	cursor: pointer;
+}
+
+#productImage{
+	max-width: 100%;
+}
+
+#countdown{
+	border: none;
+	background: none;
+}
+
+#vote{
+	margin-top: 40px;
+}
+
+#storeLogo{
+	width:80px;
+	height:100px;
+	display: block;
+	margin: auto;
+}
+#tutorial{
+	position: absolute;
+	z-index: 100;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.8);
+	padding: 20px;
+	color: #FFF;
+	text-align: center;
+	overflow-y: scroll;
+}
+
+#tutorial h2{
+	font-size: 20px;
+}
+
+#tutorial .description{
+	font-size: 12px;
+	text-align: left;
+	width: 97%;
+	margin: auto;
+	margin-bottom: 50px;
+	padding-bottom: 50px;
+	border-bottom: 2px solid #666;
+}
+
+#tutorial img{
+	display: block;
+	margin: auto;
+	margin-bottom: 40px;
+	width: 280px; 
+	height: 280px; 
+	border-radius: 140px; 
+	-webkit-border-radius: 140px; 
+	border: 5px solid #AAA;
+}
+
+.endTutorial{
+	display: inline-block;
+	margin: 20px auto !important;
+	padding: 15px;
+}
+
+#map-canvas { height: 100% }
+#peeko { display: none; }
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+/* Styles */
+	
+	#buyOnline{
+		display: block;
+		margin-bottom: 10px;
+	}
+	
+	#countdown{
+		display: block;
+		text-align: center;
+		float: none;
+		width: auto;
+	}
+
+}
+
+.star.upvote-enabled.starred{
+	display: none;
+}
+
+/* Upvote Downvote */
+
+div.upvote {
+    text-align: center;
+}
+
+div.upvote a.upvote-enabled {
+    cursor: pointer;
+}
+
+div.upvote a {
+    color: transparent;
+    background-image: url('images/sprites-stackoverflow.png?v=1');
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    width: 41px;
+    height: 25px;
+}
+
+div.upvote span.count {
+    display: block;
+    font-size: 32px;
+    font-family: Arial, Liberation, Sans, DejaVu Sans, sans-serif;
+    color: #555;
+    text-align: center;
+    line-height: 1;
+}
+
+div.upvote a.upvote {
+    background-position: 0px -265px;
+}
+
+div.upvote a.upvote.upvoted {
+    background-position: 0px -230px;
+}
+
+div.upvote a.downvote {
+    background-position: 0px -300px;
+}
+
+div.upvote a.downvote.downvoted {
+    background-position: 0px -330px;
+}
+
+div.upvote a.star {
+    width: 33px;
+    height: 31px;
+    background-position: 0px -150px;
+}
+
+div.upvote a.star.starred {
+    background-position: 0px -190px;
+}
+
+div.upvote-serverfault a {
+    background-image: url('images/sprites-serverfault.png?v=1');
+}
+
+div.upvote-meta-stackoverflow a {
+    background-image: url('images/sprites-meta-stackoverflow.png?v=1');
+}
+
+div.upvote-superuser a {
+    background-image: url('images/sprites-superuser.png?v=1');
+}
+
+div.upvote-unix a {
+    background-image: url('images/sprites-unix.png?v=1');
+    width: 42px;
+    height: 27px;
+}
+
+div.upvote-unix a.upvote {
+    background-position: 0px -237px;
+}
+
+div.upvote-unix a.upvote.upvoted {
+    background-position: 0px -198px;
+}
+
+div.upvote-unix a.downvote {
+    background-position: 0px -281px;
+}
+
+div.upvote-unix a.downvote.downvoted {
+    background-position: 0px -319px;
+}
+
+div.upvote-unix a.star {
+    width: 42px;
+    height: 30px;
+    background-position: 0px -126px;
+}
+
+div.upvote-unix a.star.starred {
+    background-position: 0px -164px;
+}
+
+div.upvote-unix span.count {
+    color: #333;
+    line-height: 15px;
+    padding: 9px 0;
+    font-family: "DejaVu Sans Mono","Bitstream Vera Sans Mono","Courier New",Courier,Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter",monospace;
+    text-shadow; 1px 1px 0 #ffffff;
+    font-weight: bold;
+    margin: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+div.upvote-programmers a {
+    background-image: url('images/sprites-programmers.png?v=1');
+    width: 42px;
+    height: 20px;
+}
+
+div.upvote-programmers a.upvote {
+    background-position: 5px -248px;
+}
+
+div.upvote-programmers a.upvote.upvoted {
+    background-position: 5px -211px;
+}
+
+div.upvote-programmers a.downvote {
+    background-position: 5px -282px;
+}
+
+div.upvote-programmers a.downvote.downvoted {
+    background-position: 5px -320px;
+}
+
+div.upvote-programmers a.star {
+    width: 42px;
+    height: 30px;
+    background-position: 6px -128px;
+}
+
+div.upvote-programmers a.star.starred {
+    background-position: 6px -166px;
+}
+
+div.upvote-programmers span.count {
+    color: #333;
+    line-height: 15px;
+    padding: 5px 0 7px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Tahoma,Geneva,Arial,sans-serif;
+}
+
+header{
+	height: 43px;
+	-webkit-box-shadow: inset 0 1px 1px -1px #fff;
+	-webkit-box-sizing: border-box;
+	background: #1bb0fd; /* Old browsers */
+	border-bottom: 1px solid #207cca;
+	padding: 0 10px;
+	text-align: center;
+}
+
+header div{
+	padding-top: 7px;
+	color: #FFF;
+	line-height: 28px;
+	font-weight: bold;
+	font: 'Helvetica Neue UltraLight', 'Helvetica', 'Arial', sans-serif;
+	font-size: 22px;
+	margin-left: 66px;
+}
+
+header a{
+	display: inline-block;
+	font-size: 22px;
+	margin-top: 8px;
+	color: #FFF;
+	line-height: 22px;
+	vertical-align:middle;
+}
+
+header a:hover{
+	text-decoration: none;
+}
+
+.deal img{
+	height: 120px !important;
+}

@@ -11,7 +11,7 @@
 			<?php for($i = 0; $i < count($stores); $i++){ ?>
 			<tr class="store listing">
 				<td><img class="icon" src="<?php echo $stores[$i]->icon; ?>" alt="<?php echo $stores[$i]->name; ?>" /></td>
-				<td><h3><?php echo $stores[$i]->name; ?></h3></td>
+				<td><h3><a href="/business/add/<?php echo $stores[$i]->id; ?>"><?php echo $stores[$i]->name; ?></a></h3></td>
 				<td><address><?php echo $stores[$i]->address; ?><br /><?php echo $stores[$i]->city; ?>, <?php echo $stores[$i]->state; ?> <?php echo $stores[$i]->zipcode; ?></address>
 				</td>
 				<?php $promotion = $stores[$i]['promotions']; ?>

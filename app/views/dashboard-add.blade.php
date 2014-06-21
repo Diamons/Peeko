@@ -47,7 +47,8 @@
 @stop
 @section('content')
 	<div class="wrap">
-		{{ Form::open(array('url' => 'business/add')); }}
+		<?php var_dump($store); ?>
+		{{ Form::model($store, array('url' => 'business/add/'.$store->id)); }}
 		<div id="locationField">
       		<input id="autocomplete" placeholder="Enter your address" onFocus="geolocate()" type="text" />
     	</div>
@@ -55,35 +56,41 @@
 	    <table id="address">
 	      <tr>
 	        <td class="label">Street address</td>
-	        <td class="slimField"><?php echo Form::text('address', false, array('id' => 'street_number')); ?></td>
-	        <td class="wideField" colspan="2"><?php echo Form::text('address1', false, array('id' => 'route')); ?></td>
+	        <td class="slimField"><?php echo Form::text('address', null, array('id' => 'street_number')); ?></td>
+	        <td class="wideField" colspan="2"><?php echo Form::text('address1', null, array('id' => 'route')); ?></td>
 	      </tr>
 	      <tr>
 	        <td class="label">City</td>
-	        <td class="wideField" colspan="3"><?php echo Form::text('city', false, array('id' => 'sublocality')); ?></td>
+	        <td class="wideField" colspan="3"><?php echo Form::text('city', null, array('id' => 'sublocality')); ?></td>
 	      </tr>
 	      <tr>
 	        <td class="label">State</td>
-	        <td class="slimField"><?php echo Form::text('state', false, array('id' => 'administrative_area_level_1')); ?></td>
+	        <td class="slimField"><?php echo Form::text('state', null, array('id' => 'administrative_area_level_1')); ?></td>
 	        <td class="label">Zip code</td>
-	        <td class="wideField"><?php echo Form::text('zipcode', false, array('id' => 'postal_code')); ?></td>
+	        <td class="wideField"><?php echo Form::text('zipcode', null, array('id' => 'postal_code')); ?></td>
 	      </tr>
 	      <tr>
 	        <td class="label">Country</td>
-	        <td class="wideField" colspan="3"><?php echo Form::text('country', false, array('id' => 'country')); ?></td>
+	        <td class="wideField" colspan="3"><?php echo Form::text('country', null, array('id' => 'country')); ?></td>
 	      </tr>
 	       <tr>
 	        <td class="label">Store Name</td>
 	        <td class="wideField" colspan="3"><?php echo Form::text('name'); ?></td>
 	        <td class="label">Website</td>
-	        <td class="wideField" colspan="3"><?php echo Form::text('website'); ?></td>
+	        <td class="wideField" colspan="3"><?php echo Form::text('menu'); ?></td>
+	      </tr>
+	      <tr>
+	      <td class="label">Expiration Date</td>
+	      <td class="wideField" colspan="3"><?php echo Form::input('date', 'promotion[end_date]', null, ['class' => 'form-control', 'placeholder' => 'Date']); ?></td>
 	      </tr>
 	    </table>
+	    Icon Selected: <?php echo Form::text('icon', null, array('id' => 'icon')); ?>
+	    <br />
 		<?php 
-			echo Form::text('latitude', false, array('id' => 'lat'));
-			echo Form::text('longitude', false, array('id' => 'long'));
+			echo Form::text('latitude', null, array('id' => 'lat'));
+			echo Form::text('longitude', null, array('id' => 'long'));
 			echo Form::label('Promotion Name');
-			echo Form::text('promotion[name]', false);
+			echo Form::text('promotion[name]', null);
 		?>
 		<br />
 		<?php
@@ -97,11 +104,37 @@
 			//echo Form::label('email', 'E-Mail Address');
 		?>
 	</div>
+	ICON: <select id="icon-picker">
+	<option>None</option>
+	<?php
+    $files = File::files(public_path().'/stores');
+    foreach($files as $file){
+    	echo "<option>".str_replace(public_path(), '', $file)."</option>";
+    }
+	?>
+	</select>
+	<img id="icon-selected" src="" />
 		{{ Form::close(); }}
 	
 @stop
 
 @section('footerscripts')
+<script>
+	jQuery(function($){
+		$("#icon-selected").attr('src',$("#icon").val());
+		
+		$("#icon-picker").change(function(e){
+			if($(this).val() == "None"){
+				$("#icon").val('');
+				$("#icon-selected").attr('src', '#');
+			}else{
+				$("#icon-selected").attr('src', $(this).val());
+				$("#icon").val($(this).val());
+			}
+			
+		});
+	});
+</script>
 {{ HTML::script('https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places'); }}
 {{ HTML::script('js/add.js'); }}
 @stop

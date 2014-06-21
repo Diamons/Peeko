@@ -1,0 +1,101 @@
+body{
+	overflow: scroll;
+}
+
+#content{
+}
+
+h3, h5{
+	margin: 0;
+	margin-top: 10px;
+}
+
+h5{
+	margin-top: 20px;
+	margin-bottom: 3px;
+	font-size: 18px;
+}
+
+h5{
+	color: #f26335;
+}
+
+.actions {
+	text-align: left;
+	color: #DDD;
+}
+
+div.actions > a{
+
+	background: #ACE8F2;
+	border-radius: 20px;
+	height: 40px;
+	padding-top: 13px;
+	width: 40px;
+	text-align: center;
+	display: inline-block;
+	margin: 0 5px;
+	transition: all .3s;
+	-webkit-transition: all .3s;
+}
+
+#sidr{
+	-webkit-transform: translate3d(0px,0px,0px);
+}
+
+div.actions > a:active, .selected{
+	background: #34B5DC;
+}
+
+
+div.actions .favorite{
+	color: #000;
+
+}
+
+div.actions > a.selected{
+	background: #34B5DC;
+}
+div.actions > a.favorite.selected span{
+	color: #e1789b;
+}	
+
+div.block .discussion{
+	display: none;
+}
+
+div.actions > div:last-child{
+	margin-right: 0;
+}
+
+div.actions > a > span{
+	font-size:18px;
+	color: #FFF;
+}
+
+.description{
+	color: #888;
+	line-height: 21px;
+	font-size: 14px;
+}
+
+.block .discussion .user-comment{
+	margin-bottom: 8px;
+}
+
+.social{
+	float: right;
+	background: #FFF;
+}
+
+.discussion textarea{
+	margin-bottom: 10px;
+}
+
+.discussion input[type="submit"]{
+	float: right;
+}
+
+.user-comments{
+	width: 100%;
+}

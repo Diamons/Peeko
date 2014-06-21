@@ -1,0 +1,162 @@
+html, body{
+	height: 100%;
+	margin: 0;
+	background: #EFEFEF;
+	max-width: 500px;
+	
+}
+
+#map{
+	display: none;
+}
+
+#map, #map-canvas{
+	height: 100%;
+}
+
+body{
+	width: 400px;
+	overflow-y: hidden;
+	overflow: hidden;
+	position: relative;
+	font-family: 'Helvetica', 'Helvetica Neue', 'Arial', sans-serif;
+}
+
+a{
+	-webkit-touch-callout: none;
+	-webkit-user-select: text;  
+}
+
+header{
+	border-width: 0px !important;
+	padding: 3px 0;
+	background: #2cb5dc !important;
+	color: #FFF;
+	width: 100%;
+	padding: 2px;
+}
+
+#menu{
+	background: #333;
+}
+
+#menu ul{
+	padding-left: 0;
+}
+
+#menu li a{
+	margin-bottom: 20px;
+	color: #FFF;
+	display: block;
+	padding: 20px 15px;
+	font-weight: normal;
+	font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+#menu li a.selected{
+
+}
+
+#locateMe{
+	padding: 7px 9px 4px 11px;
+}
+
+header > .linksContainer a{
+	display: block;
+	float: right;
+	color: #eeffff !important;
+	font-size: 28px;
+	margin: 4px 10px;
+	width: 44px !important;
+	height: 42px;
+	background: #2cc1df;
+	border-radius: 4px;
+	padding: 6px 8px 4px 8px;
+	border: 1px solid #15adcb;
+	text-align: center;
+}
+
+#back{
+	float: left;
+}
+
+#app{
+	text-align: center;
+	font-size: 32px;
+	padding: 0;
+	margin: 0;
+	margin-top: 5px;
+}
+
+header > .linksContainer a:active{
+	background: #126aa1;
+}
+
+header > .linksContainer a:hover{
+	text-decoration: none;
+}
+
+#content{
+	padding: 2px;
+	height: 100%;
+	position: relative;
+}
+
+div.logo{
+	width: 58px;
+	height: 55px;
+	border-radius: 7px;
+	overflow: hidden;
+	background-size: 81px auto;
+	background-position: -12px -18px;
+	float: left;
+	margin: 0 10px 0 0;
+	border: 1px solid #EEE;
+}
+
+div.brandname{
+	font-size: 20px;
+	margin-top: 12px;
+}
+
+.block{
+	font-size: 12px;
+	margin-top: 10px;
+	border-radius: 7px;
+	background: #FFF;
+	border: 1px solid #E1E1E1;
+	color: #8f8a8a;
+}
+
+.block > div{
+	padding: 10px;
+}
+
+.block > div+div{
+	border-top: 1px solid #E1E1E1;
+}
+
+.block img.blockImage{
+	width: 100%;
+	display: block;
+	margin: auto;
+}
+
+iframe{
+	border: none;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+
+#menu ul{
+	list-style-type: none;
+}
+
+#menuLink{
+	float: left;
+}
+
+#backup{
+	display: none;
+}

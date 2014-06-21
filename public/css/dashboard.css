@@ -36,3 +36,14 @@
 	height: auto;
 	display: block;
 }
+
+.icon-picker{
+	transition: all .2s;
+	-webkit-transition: all .2s;
+	-moz-transition: all .2s;
+	border: 2px solid #FFF;
+}
+.icon-picker:hover{
+	cursor: pointer;
+	border: 2px solid #000;
+}

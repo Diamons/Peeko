@@ -42,23 +42,30 @@
 			$this->layout->content = View::make('dashboard-index')->with('stores', Store::with('promotions')->get());
 		}
 
-		public function getAdd(){
+		public function getAdd($id=NULL){
+			$store = Store::find($id);
 			if(Auth::check()){
 				$this->layout = View::make('layouts.dashboard');
 				$title = "Add Your Business";
 				View::share('title', $title);
-				$this->layout->content = View::make('dashboard-add');
+				$this->layout->content = View::make('dashboard-add')->with('store', $store);
 			}else{
 				Redirect::back();
 			}
 			
 		}
 
-		public function postAdd(){
+		public function postAdd($id=NULL){
+			$store = Store::find($id);
 			$this->layout = null;
 			$input = Input::get();
-			$store = new Store($input);
-			$store->addStore($input);
+			if(empty($store)){
+				$store = new Store($input);
+				$store->addStore($input);
+			}else{
+				$store->update($input);
+			}
+			
 			return Redirect::to('/business/dashboard');
 		}
 		
