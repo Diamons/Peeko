@@ -47,7 +47,7 @@
 @stop
 @section('content')
 	<div class="wrap">
-		<?php var_dump($store); ?>
+		<?php //var_dump($store); ?>
 		@if(isset($store))
 			{{ Form::model($store, array('url' => 'business/add/'.$store->id)); }}
 		@else
