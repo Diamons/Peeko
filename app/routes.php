@@ -23,3 +23,7 @@ Route::get('/', 'HomeController@showWelcome');
 Route::controller('business', 'BusinessController');
 //Route::controller('business', 'BusinessController');
 Route::controller('api', 'ApiController');
+
+Route::controller('queenstechmeetup', function(){
+	return 'Test';
+});
