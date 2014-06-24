@@ -81,7 +81,7 @@
 	      </tr>
 	      <tr>
 	      <td class="label">Expiration Date</td>
-	      <td class="wideField" colspan="3"><?php echo Form::input('date', 'promotion[end_date]', null, 'class' => 'form-control', 'placeholder' => 'Date']); ?></td>
+	      <td class="wideField" colspan="3"><?php echo Form::input('date', 'promotion[end_date]', null, array('class' => 'form-control', 'placeholder' => 'Date')); ?></td>
 	      </tr>
 	    </table>
 	    Icon Selected: <?php echo Form::text('icon', null, array('id' => 'icon')); ?>
