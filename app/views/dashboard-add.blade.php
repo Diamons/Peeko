@@ -48,12 +48,11 @@
 @section('content')
 	<div class="wrap">
 		<?php var_dump($store); ?>
-		{{
-			if(isset($store)):
-				Form::model($store, array('url' => 'business/add/'.$store->id));
-			else:
-				{{ Form::open(array('url' => 'business/add')); }}
-		}}
+		@if(isset($store))
+			Form::model($store, array('url' => 'business/add/'.$store->id));
+		@else
+			Form::open(array('url' => 'business/add'));
+		@endif
 		<div id="locationField">
       		<input id="autocomplete" placeholder="Enter your address" onFocus="geolocate()" type="text" />
     	</div>
