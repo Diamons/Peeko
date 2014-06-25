@@ -30,6 +30,5 @@
 				<p>Save money and take advantage of great promotions nearby!</p>
 			</div>
 		</div>
-		<iframe src="https://docs.google.com/forms/d/1ZCeyJ5bl2ZiM0NMEqSihIsz19lh3ZscLa38e3FDoafs/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 	</div>
 @stop
