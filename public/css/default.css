@@ -13,7 +13,7 @@ header{
 }
 
 #container{
-	width: 980px;
+	width: 1140px;
 	margin: auto;
 }
 
@@ -34,7 +34,7 @@ img{
 
 #peekomain{
 	width: 100%;
-	height: 670px;
+	height: 700px;
 	background: url('../img/phone.jpg') no-repeat;
 	background-size: 100% auto;
 	background-position: 0 -90px;
@@ -128,8 +128,8 @@ img{
 	text-transform: lowercase;
 }
 
-.iosappstore{
-	width: 350px;
-	height: auto;
+.appstore{
+	height: 120px;
+	display: block;
 	margin: auto;
 }
