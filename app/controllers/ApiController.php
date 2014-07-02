@@ -25,6 +25,11 @@ class ApiController extends BaseController {
 		return $stores->toJson();
 	}
 
+	public function getStoresjson($lat, $long){
+		$stores = Store::with('promotions')->get();
+		return Response::json($stores)->setCallback(Input::get('callback'));
+	}
+
 
 
 }
