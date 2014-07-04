@@ -41,7 +41,7 @@
         margin-bottom: 2px;
       }
       #lat, #long{
-      	display: none;
+      	display: block;
       }
     </style>
 @stop
