@@ -1,13 +1,21 @@
 <?php
 
-class Store extends Eloquent {
-	protected $fillable = array('latitude', 'longitude', 'name', 'address', 'city', 'state', 'zipcode', 'icon');
+class Store extends PeekoModel {
+	protected $fillable = array('latitude', 'longitude', 'name', 'address', 'city', 'state', 'zipcode', 'icon', 'phone');
+	
+	/* Rules */
+	protected static $rules = array(
+		'iconUpload' => 'image_size:220,248',
+		'bannerUpload' => 'image_size:320,125'
+	);
+
 	/** Define the relationship for promotions **/
 	public function promotions(){
 		return $this->hasMany('Promotion');
 	}
 
 	public function addStore($input){
+
 		$input['promotion']['end_date'] = DateTime::createFromFormat('Y-m-d', $input['promotion']['end_date']);
 		//$input['promotion']['end_date'] = time();
 		//var_dump($input);
@@ -25,12 +33,14 @@ class Store extends Eloquent {
 				$store->icon = "/stores/".$id."/icon.png";
 			}
 			$store->address = $address;
-			$input['promotion']['image'] = "/stores/".$id."/banner.jpg";
+			
+			//We're no longer doing this
+			//$input['promotion']['image'] = "/stores/".$id."/banner.jpg";
 
 			if(empty($input['menu'])){
 				$store->menu = "/stores/".$id."/menu.jpg";
 			}else{
-				$store->menu = "/api?r=".$input['website'];
+				$store->menu = "/api?r=".$input['menu'];
 			}
 			
 			//die(print_r($input));
@@ -42,8 +52,10 @@ class Store extends Eloquent {
 			$promotion = new Promotion($input['promotion']);
 			$store->promotions()->save($promotion);
 
-			$path = public_path() . '/stores/'.$id.'/';
-			File::makeDirectory($path, $mode = 0775, true, false);
+
+			//Old code for when we were making directories
+			//$path = public_path() . '/stores/'.$id.'/';
+			//File::makeDirectory($path, $mode = 0775, true, false);
 		}
 	}
 }

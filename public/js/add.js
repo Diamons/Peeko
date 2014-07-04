@@ -36,8 +36,11 @@ $(function(){
 	  console.log(address); 
   	  geocoder.geocode( { 'address': address}, function(results, status) {
 	      if (status == google.maps.GeocoderStatus.OK) {
-	     	document.getElementById('long').value = results[0].geometry.location.A; //Longitude
-	     	document.getElementById('lat').value = results[0].geometry.location.k; //Latitude
+	      	var lng = results[0].geometry.location.lng();
+	      	var lat = results[0].geometry.location.lat();
+
+	     	document.getElementById('long').value = lng; //Longitude
+	     	document.getElementById('lat').value = lat; //Latitude
 	      }else{
 	      	alert('Geocode was not successful for the following reason: ' + status);
 	      }

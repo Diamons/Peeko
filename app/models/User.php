@@ -3,7 +3,7 @@
 use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableInterface;
 
-class User extends Model implements UserInterface, RemindableInterface {
+class User extends PeekoModel implements UserInterface, RemindableInterface {
 
 	protected $fillable = array('email', 'password');
 	protected $softDelete = true;

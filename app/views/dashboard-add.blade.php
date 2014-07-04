@@ -49,9 +49,9 @@
 	<div class="wrap">
 		<?php //var_dump($store); ?>
 		@if(isset($store))
-			{{ Form::model($store, array('url' => 'business/add/'.$store->id)); }}
+			{{ Form::model($store, array('url' => 'business/add/'.$store->id, 'files' => true)); }}
 		@else
-			{{ Form::open(array('url' => 'business/add')); }}
+			{{ Form::open(array('url' => 'business/add', 'files' => true)); }}
 		@endif
 		<div id="locationField">
       		<input id="autocomplete" placeholder="Enter your address" onFocus="geolocate()" type="text" />
@@ -86,6 +86,8 @@
 	      <tr>
 	      <td class="label">Expiration Date</td>
 	      <td class="wideField" colspan="3"><?php echo Form::input('date', 'promotion[end_date]', null); ?></td>
+	      <td class="label">Phone Number</td>
+	      <td class="wideField" colspan="3"><?php echo Form::text('phone'); ?></td>
 	      </tr>
 	    </table>
 	    Icon Selected: <?php echo Form::text('icon', null, array('id' => 'icon')); ?>
@@ -102,21 +104,24 @@
 			echo Form::text('promotion[description]', false);
 		?>
 		<br />
+		ICON: <select id="icon-picker">
+		<option>None</option>
+		<?php
+	    $files = File::files(public_path().'/stores');
+	    foreach($files as $file){
+	    	echo "<option>".str_replace(public_path(), '', $file)."</option>";
+	    }
+		?>
+		</select>
+		<br />
+		ICON UPLOAD: <input type="file" name="iconUpload" />
+		BANNER UPLOAD: <input type="file" name="bannerUpload" />
 		<?php
 			echo Form::submit('Submit Listing', array('class' => 'btn btn-default'));
 			echo Form::token();
 			//echo Form::label('email', 'E-Mail Address');
 		?>
 	</div>
-	ICON: <select id="icon-picker">
-	<option>None</option>
-	<?php
-    $files = File::files(public_path().'/stores');
-    foreach($files as $file){
-    	echo "<option>".str_replace(public_path(), '', $file)."</option>";
-    }
-	?>
-	</select>
 	<img id="icon-selected" src="" />
 		{{ Form::close(); }}
 	
@@ -141,4 +146,14 @@
 </script>
 {{ HTML::script('https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places'); }}
 {{ HTML::script('js/add.js'); }}
+<script>
+    jQuery(document).ready(function($) {
+		  $('form').submit(function(e){
+		  	if($("#long").val() == "" || $("#lat").val() == "" || $("#street_number") == ""){
+		  			return false;
+
+		  	}
+		  });
+	});
+    </script>
 @stop

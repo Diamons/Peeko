@@ -7,8 +7,8 @@
 				<th>Store Name</th>
 				<th>Street Address</th>
 				<th>Current Promotion</th>
-			</tr>
 			<?php for($i = 0; $i < count($stores); $i++){ ?>
+
 			<tr class="store listing">
 				<td><img class="icon" src="<?php echo $stores[$i]->icon; ?>" alt="<?php echo $stores[$i]->name; ?>" /></td>
 				<td><h3><a href="/business/add/<?php echo $stores[$i]->id; ?>"><?php echo $stores[$i]->name; ?></a></h3></td>
@@ -16,11 +16,13 @@
 				</td>
 				<?php $promotion = $stores[$i]['promotions']; ?>
 				<td>
+				<?php if(!empty($promotion[0])){ ?>
 					<img class="banner small" src="<?php echo $promotion[0]->image; ?>" alt="<?php echo $promotion[0]->name; ?>" />
 					<p><b><?php echo $promotion[0]->name; ?></b></p>
 					<p>
 						<?php echo $promotion[0]->description; ?>
 					</p>
+				<?php } ?>
 				</td>
 			</tr>
 			<?php } ?>

@@ -93,6 +93,8 @@ $app = array(
 
 	'providers' => array(
 
+		'Aws\Laravel\AwsServiceProvider',
+		//'Cviebrock\ImageValidator\ImageValidatorServiceProvider',
 		'Illuminate\Foundation\Providers\ArtisanServiceProvider',
 		'Illuminate\Auth\AuthServiceProvider',
 		'Illuminate\Cache\CacheServiceProvider',
@@ -150,6 +152,7 @@ $app = array(
 
 		'App'             => 'Illuminate\Support\Facades\App',
 		'Artisan'         => 'Illuminate\Support\Facades\Artisan',
+		'AWS'			  => 'Aws\Laravel\AwsFacade',
 		'Auth'            => 'Illuminate\Support\Facades\Auth',
 		'Blade'           => 'Illuminate\Support\Facades\Blade',
 		'Cache'           => 'Illuminate\Support\Facades\Cache',
@@ -170,7 +173,7 @@ $app = array(
 		'Lang'            => 'Illuminate\Support\Facades\Lang',
 		'Log'             => 'Illuminate\Support\Facades\Log',
 		'Mail'            => 'Illuminate\Support\Facades\Mail',
-		'Model'			  => 'Way\Database\Model',
+		'PeekoModel'	  => 'Way\Database\Model',
 		'Paginator'       => 'Illuminate\Support\Facades\Paginator',
 		'Password'        => 'Illuminate\Support\Facades\Password',
 		'Queue'           => 'Illuminate\Support\Facades\Queue',
