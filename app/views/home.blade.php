@@ -22,8 +22,8 @@
 			</div>
 
 			<div class="about">
-				<a href="https://itunes.apple.com/us/app/peeko/id781198595?ls=1&mt=8"><img src="/img/app_store_badge.png" class="appstore" alt="Peeko On the iTunes App Store for iPhone" /></a>
-				<a target="_blank" href="https://play.google.com/store/apps/details?id=com.peekoapp.android"><img src="http://eutobaptist.com/wp-content/uploads/2014/04/google-play.png" class="appstore" alt="Peeko On the iTunes App Store for iPhone" /></a>
+				<a class="ios" href="https://itunes.apple.com/us/app/peeko/id781198595?ls=1&mt=8"><img src="/img/iosapp.png" class="appstore" alt="Peeko On the iTunes App Store for iPhone" /></a>
+				<a target="_blank" class="android" href="https://play.google.com/store/apps/details?id=com.peekoapp.android"><img src="/img/playstore.png" class="appstore" alt="Peeko On the Google Play Store for Android" /></a>
 				<p>Peeko is an iPhone app that brings you deals at stores nearby.</p>
 				<p>Businesses offer discounts to local customers to grow their business.</p>
 				<p>No coupons or vouchers to buy beforehand. Simply walk in, present the deal, and redeem.</p>
