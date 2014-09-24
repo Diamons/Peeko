@@ -1,7 +1,7 @@
 @extends('layouts.default')
 @section('content')
 	<div id="peekomain">
-		<h1>Take a Peek</h1>
+		<h1>Give a Peek</h1>
 		<div id="deals" class="clearfix">
 			<div class="deal-container">
 				<div class="single-deal animated fadeInDown">
