@@ -1,0 +1,125 @@
+@import url(http://fonts.googleapis.com/css?family=Quicksand:400,700);
+/* line 4, ../scss/_header.scss */
+html, body {
+  min-width: 768px;
+}
+
+/* line 8, ../scss/_header.scss */
+.logo {
+  background: none;
+  margin-top: -0;
+  padding: 0;
+  float: left;
+}
+/* line 14, ../scss/_header.scss */
+.logo img {
+  max-width: 190px;
+}
+
+/* line 19, ../scss/_header.scss */
+.main-zone {
+  background: transparent;
+}
+
+/* line 23, ../scss/_header.scss */
+.full-width .navigation-front {
+  background: #2b619d;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #2b619d 0%, #c3eefe 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #2b619d), color-stop(100%, #c3eefe));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left, #2b619d 0%, #c3eefe 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left, #2b619d 0%, #c3eefe 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(left, #2b619d 0%, #c3eefe 100%);
+  /* IE10+ */
+  background: linear-gradient(to right, #2b619d 0%, #c3eefe 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2b619d', endColorstr='#c3eefe',GradientType=1 );
+  /* IE6-9 */
+}
+
+/* line 35, ../scss/_header.scss */
+.home-slider {
+  background: url("/landing/images/nyc.jpg");
+  background-size: cover;
+  position: relative;
+}
+/* line 40, ../scss/_header.scss */
+.home-slider .slider-image {
+  max-height: 600px;
+  display: block;
+  width: 100%;
+}
+/* line 46, ../scss/_header.scss */
+.home-slider .home-slider__text {
+  background-size: cover;
+  color: #FFF;
+  padding: 150px 0;
+  font-size: 62px;
+  text-align: center;
+  max-width: 1020px;
+  margin: auto;
+  font-family: 'Quicksand';
+}
+/* line 57, ../scss/_header.scss */
+.home-slider .home-slider__image {
+  max-width: 260px;
+  height: auto;
+  float: left;
+  margin-top: -40px;
+  display: block;
+}
+@media (max-width: 850px) {
+  /* line 57, ../scss/_header.scss */
+  .home-slider .home-slider__image {
+    max-width: 200px;
+  }
+}
+/* line 68, ../scss/_header.scss */
+.home-slider .home-slider__subtext {
+  font-size: 24px;
+}
+
+/* line 74, ../scss/_header.scss */
+#navigation-box {
+  margin-top: 5px;
+}
+
+/* line 81, ../scss/_header.scss */
+ul#navigation a.active:before {
+  color: inherit;
+}
+/* line 86, ../scss/_header.scss */
+ul#navigation a {
+  color: #FFF;
+}
+
+/* line 91, ../scss/_header.scss */
+.top-navigation {
+  position: static;
+}
+
+/* line 95, ../scss/_header.scss */
+.getstarted-btn {
+  margin-top: 10px;
+  padding: 16px 39px 16px 70px;
+}
+
+/* line 100, ../scss/_header.scss */
+.legitimizer-container {
+  margin: auto;
+  margin-top: 40px;
+}
+
+/* line 105, ../scss/_header.scss */
+.avalible-services h2 {
+  margin-top: 20px;
+}
+
+/* line 109, ../scss/_header.scss */
+#consultation-form {
+  margin: 30px auto;
+}

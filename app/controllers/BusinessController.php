@@ -2,13 +2,17 @@
 	
 	class BusinessController extends BaseController{
 
-		protected $layout = "layouts.business";
+		protected $layout = "layouts.business-landing";
 
-		public function getIndex()
-		{	
+		public function getIndex() {	
 			$title = "For Business";
 			View::share('title', $title);
 			$this->layout->content = View::make('business-index')->withName('Shahruk');
+		}
+
+		public function postIndex() {
+			var_dump(Input::get('user-email'));
+			die("HEY!");
 		}
 
 		public function postLogin(){
