@@ -1,5 +1,9 @@
 // Initialisation for all page
 
+$('a.js-no-link').on('click', function(e) {
+  e.preventDefault();
+});
+
 $('a').smoothScroll();
 
 
