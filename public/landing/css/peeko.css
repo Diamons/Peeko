@@ -95,31 +95,32 @@ ul#navigation a.active:before {
 /* line 86, ../scss/_header.scss */
 ul#navigation a {
   color: #FFF;
+  font-family: "Quicksand", sans-serif;
 }
 
-/* line 91, ../scss/_header.scss */
+/* line 92, ../scss/_header.scss */
 .top-navigation {
   position: static;
 }
 
-/* line 95, ../scss/_header.scss */
+/* line 96, ../scss/_header.scss */
 .getstarted-btn {
   margin-top: 10px;
   padding: 16px 39px 16px 70px;
 }
 
-/* line 100, ../scss/_header.scss */
+/* line 101, ../scss/_header.scss */
 .legitimizer-container {
   margin: auto;
   margin-top: 40px;
 }
 
-/* line 105, ../scss/_header.scss */
+/* line 106, ../scss/_header.scss */
 .avalible-services h2 {
   margin-top: 20px;
 }
 
-/* line 109, ../scss/_header.scss */
+/* line 110, ../scss/_header.scss */
 #consultation-form {
   margin: 30px auto;
 }
