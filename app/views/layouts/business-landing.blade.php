@@ -57,7 +57,7 @@
         <div class='top-navigation'>
             <div class="navigation-front">
                 <div class="container">
-                <a href="index.html" class='logo'><img src="/peeko-logo-alt.png" /></a>
+                <a href="#" class='logo'><img src="/peeko-logo-alt.png" /></a>
                 <div id="navigation-box">
                     <a href="#" id="navigation-toggle">
                         <span class="menu-icon"></span>
@@ -166,7 +166,7 @@
 
             <div class='col-sm-6 col-md-6 col-lg-6'>
                     <div class='service-item'>
-                        <a href='single-service.html' class='icon-holder'>
+                        <a href='#' class='icon-holder'>
                             <i class='service-icon icon-cog scale'></i>
                         </a>
                         <h4>Create a Peek</h4>
@@ -174,7 +174,7 @@
                     </div>
 
                     <div class='service-item'>
-                        <a href='single-service.html' class='icon-holder'>
+                        <a href='#' class='icon-holder'>
                             <i class='service-icon icon-cloud scale'></i>
                         </a>
                         <h4>Get Started Free</h4>
@@ -183,7 +183,7 @@
               </div>
               <div class='col-sm-6 col-md-6 col-lg-6'>
                     <div class='service-item'>
-                        <a href='single-service.html' class='icon-holder'>
+                        <a href='#' class='icon-holder'>
                             <i class='service-icon icon-users scale'></i>
                         </a>
                         <h4>Attract Local Customers</h4>
@@ -191,7 +191,7 @@
                     </div>
 
                     <div class='service-item'>
-                        <a href='single-service.html' class='icon-holder'>
+                        <a href='#' class='icon-holder'>
                             <i class='service-icon icon-brench scale'></i>
                         </a>
                         <h4>Grow your Business</h4>
