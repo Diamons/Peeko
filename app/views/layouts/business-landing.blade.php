@@ -3,9 +3,9 @@
   <!-- Basic Page Needs -->
         <meta charset="utf-8">
         <title>Peeko - Take a Peek</title>
-        <meta name="description" content="A Template by Gozha.net">
-        <meta name="keywords" content="HTML, CSS, JavaScript">
-        <meta name="author" content="Gozha.net">
+        <meta name="description" content="The Peeko Shopping Network">
+        <meta name="keywords" content="Local Search, Peeko, Business, Marketing, Flyers">
+        <meta name="author" content="peekoapp.com">
 
     <!-- Mobile Specific Metas-->
         <meta name="viewport" content="width=1024">
@@ -87,7 +87,7 @@
         <section class="container">
 
             <div class="service-detail">
-                <div class="detail-article first-article">
+                <div class="detail-article first-article detail-article--peeko">
                      <div class="col-sm-6 col-md-6 col-lg-6">
                         <div class="preview-image">
                             <img alt="" src="landing/images/peekoscreen.jpg">
@@ -105,10 +105,10 @@
                     </div>
 
                     <div class="col-sm-6 col-md-6 col-lg-6">
-                        <h3>Take a Peek</h3>
-                        <p class="decript">Say goodbye to Social Media Consultants, Flyers, and Ads</p>
+                        <h3>A Simple Digital Flyer</h3>
+                        <p class="decript">Say goodbye to SEO, Flyers, and Ads</p>
                         <p>
-                            Reach customers when it matters most - when they're ready to shop. Radio, print, flyers - they all reach customers at an inconvenient time in hopes that they'll remember your store when looking for something they want. Peeko puts you in touch with customers that are within walking distance to your store straight on their smartphones. No expensive posters to print or ads to take out.
+                            A Peek serves as a digital flyer - reach new customers locally through our powerful Shopping Network. No messy posters to print or expensive ads to buy. Reach thousands of new customers through their smartphones instantly.
                         </p>
                     </div>
 
@@ -119,17 +119,17 @@
                 <div class="col-sm-4 col-md-4 col-lg-4 first-colunm">
                     <div class="statment">
                         <i class="icon-clock"></i>
-                        <p><strong>Local users</strong> browse the Peeko app and find Peeks they like.</p>
+                        <p><strong>Save time and money</strong> finding new customers by letting our Shopping Network promote your business for you.</p>
                     </div>
 
                     <div class="statment">
                         <i class="icon-infinity"></i>
-                        <p><strong>Interested customers</strong> visit your store and show the Peek to the cashier on the Peeko app.</p>
+                        <p><strong>Attract local customers</strong> that become repeat customers. Don't waste time and effort reaching the wrong target audience.</p>
                     </div>
 
                     <div class="statment">
                         <i class="icon-browser"></i>
-                        <p><strong>The store</strong> decides how to handle the Peek and how to track it. There's no extra apps or hardware to use. </p>
+                        <p><strong>Peeko Wallet</strong> allows businesses to accept credit card and Bitcoin transactions with fees of only 1%* per transaction.<br /> <strong>(COMING SOON)</strong>  </p>
                     </div>
                 </div>
                 <div class="col-sm-4 col-md-4 col-lg-4">
@@ -140,17 +140,17 @@
                 <div class="col-sm-4 col-md-4 col-lg-4 last-colunm">
                     <div class="statment">
                         <i class="icon-brush"></i>
-                        <p><strong>Save time and money</strong> by not having to re-train staff. A customer walks in and shows the Peek - the rest is up to you! </p>
+                        <p><strong>Control your brand identity</strong> by customizing your store icon and banner freely.</p>
                     </div>
 
                     <div class="statment">
                         <i class="icon-briefcase"></i>
-                        <p><strong>Keep customers happy</strong> with our Instant Support. If a customer has issues redeeming the offer, we contact the store within minutes to clear any confusion and keep everyone happy. </p>
+                        <p><strong>Peeko Support</strong> instantly contacts the business if the business has a question or problem during the redemption process.</p>
                     </div>
 
                     <div class="statment">
                         <i class="icon-cone"></i>
-                        <p><strong>Upgrade</strong> at any time when you feel you're ready to take advantage of the Peeko Premium features. </p>
+                        <p><strong>Make announcements</strong> and keep your customers up to date with your latest news through the Peeko Shopping Network. </p>
                     </div>
                 </div>
             </div>

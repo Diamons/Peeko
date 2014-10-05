@@ -1,3 +1,10 @@
 @import "breakpoint";
 @import "compass/css3/box-shadow";
 @import "header";
+
+.detail-article--peeko {
+  p {
+    font-size: 24px;
+    line-height: 1.5em;
+  }
+}
