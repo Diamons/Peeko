@@ -4,33 +4,56 @@
 <title>{{ $title }} - Peeko</title>
 <link href='http://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,400,400italic' rel='stylesheet' type='text/css'>
 {{ HTML::style('//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css'); }}
-{{ HTML::style('css/stylesheet.css'); }}
 {{ HTML::style('css/animate.css'); }}
 {{ HTML::style('css/default.css'); }}
+{{ HTML::style('css/stylesheet.css'); }}
 
 
 </head>
 <body>
 	<div id="container" class="wrap">
-		<div class="clearfix">
-		<?php
-		/*<header>
+		<div class="peeko-main">
 			<a href="/" id="logo">
-				<img src="/img/peeko.png" />
+				<img src="/peeko-logo-alt.png" />
 			</a>
-			<ul id="menu">
-				<li><a href="#"></a>
-			</ul>
-		</header>*/
-		?>
-		<a href="/" id="logo">
-			<img src="/img/peeko.png" />
-		</a>
-		<nav id="mainMenu">
-			<ul>
-				<li><a href="/business">For Business</a></li>
-			</ul>
-		</nav>
+			<p class="peeko-story">
+				We've introduced several new features and improvements in our upcoming version of Peeko.
+			</p>
+
+			<div class="features">
+				<div class="feature clearfix">
+					<div class="feature__icon">
+						<span class="glyphicon glyphicon-gift"></span>
+					</div>
+					<div class="feature__info">
+						<span class="feature__name">Peeko Offers</span> lets you use exclusive offers and try thousands of new local businesses for free. No coupons to print or vouchers to purchase ahead of time.
+					</div>
+				</div>
+				<div class="feature clearfix">
+					<div class="feature__icon">
+						<span class="glyphicon glyphicon-credit-card"></span>
+					</div>
+					<div class="feature__info">
+						<span class="feature__name">Peeko Wallet</span> is the most convenient way to pay on the Peeko Shopping Network. Earn <span class="peeko-points">Peeko Points</span> while shopping on the Peeko Shopping Network.
+					</div>
+				</div>
+				<div class="feature clearfix">
+					<div class="feature__icon">
+						<span class="glyphicon glyphicon-star-empty"></span>
+					</div>
+					<div class="feature__info">
+					<span class="feature__name peeko-points">Peeko Points</span> can be used to get free prizes like gift cards, drinks, and more. Collect <span class="peeko-points">Peeko Points</span> to unlock higher level Peeko Offers.
+					</div>
+				</div>
+				<div class="feature clearfix">
+					<div class="feature__icon">
+						<span class="glyphicon glyphicon-shopping-cart"></span>
+					</div>
+					<div class="feature__info">
+					<span class="feature__name">Peeko Takeout</span> lets you order food and even split the bill with a friend through our app. Get notified automatically when your order is ready.
+					</div>
+				</div>
+			</div>
 		</div>
 		@yield('content')
 	</div>

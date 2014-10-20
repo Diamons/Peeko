@@ -1,139 +1,61 @@
-@import url(http://fonts.googleapis.com/css?family=Quicksand:400,700);
-
-body{
-	background: #FFF;
+body {
+	background: url(/img/peeko4.jpg);
+	background-size: cover;
+	color: #DDD;
+	font-size: 12px;
+	font-family: Quicksand, sans-serif;
 }
 
-header{
-	padding: 40px 0;
-}
-
-
-.wrap{
-	width: 1140px;
-	margin: auto;
-}
-
-#container{
-	width: 1140px;
-	margin: auto;
-}
-
-#logo{
-	display: block;
-	margin: 20px 0;
-	float: none;
-}
-#logo > img{
-	height: 100px;
-	width: auto;
-}
-
-img{
-	max-width: 100%;
+#logo img{
+	max-width: 250px;
 	height: auto;
-}
-
-#peekomain{
-	width: 100%;
-	height: 700px;
-	background: url('../img/phone.jpg') no-repeat;
-	background-size: 100% auto;
-	background-position: 0 -90px;
-	border-radius: 10px;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	overflow: hidden;
-	position: relative;
-	color: #FFF;
-	text-align: center;
-	margin-bottom: 40px;
-	font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
-}
-
-#peekomain h1{
-	margin: 35px auto 0 auto;
-}
-
-#deals{
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-}
-
-#deals .deal-container{
-	float: left;
-	padding: 0 20px;
-	text-align: left;
-	width: 350px;
-	font-size: 12pt;
-	line-height: 64px;
-}
-
-#deals .about{
-	float: right;
-	text-align: right;
-	width: 350px;
-	padding: 0 20px;
-	text-align: left;
-}
-
-#deals .about > p{
-	margin-top: 2em;
-	font-size: 1.3em;
-}
-.single-deal{
-	margin-bottom: 20px;
-}
-
-.icon{
-	height: 64px;
-	width: 64px;
-	background: #ffa257;
-	float: left;
-	border-radius: 4px;
-	-webkit-border-radius: 4px;
-	text-align: center;
-	vertical-align: middle;
-	line-height: 64px;
-	overflow: hidden;
-	font-size: 14pt;
-	text-transform: uppercase;
-	margin-right: 12px;
-}
-
-.free.icon{
-	background: #01a8cc;
-}
-
-/* Thursday May 15, 2014 */
-
-#logo{
-	float: left;
-	margin: 5px 0;
-}
-
-#mainMenu{
-	float: right;
-	margin-right: 6px;
-}
-
-#mainMenu ul{
-	list-style: none;
-	margin-top: 5em;
-	font-family: "Montserrat" sans-serif;
-}
-
-#mainMenu a{
-	text-decoration: none;
-	font-size: 14pt;
-	color: #666;
-	text-transform: lowercase;
-	font-family: "Quicksand", sans-serif;
-}
-
-.appstore{
-	height: 120px;
+	margin: 60px auto 40px;
 	display: block;
+}
+
+.peeko-main {
+	position: absolute;
+	height: 100%;
+	width: 400px;
+	font-size: 14px;
+	padding: 20px;
+	left: 120px;
+	background: rgba(20, 36, 90, .8);
+}
+
+.features {
+	font-size: 12px;
+	margin-top: 30px;
+}
+
+.feature {
+	border-bottom: 1px solid #2A3C79;
+	padding-bottom: 15px;
+	padding-top: 10px;
+}
+.features .feature__icon {
+	color: #FFF;
+	float: left;
+	width: 20%;
+	font-size: 24px;
+	display: block;
+	text-align: center;
 	margin: auto;
+	margin-left: -20px;
+}
+
+.features .feature__icon .glyphicon {
+	vertical-align: middle;
+}
+
+.feature__info {
+	float: left;
+	width: 80%;
+}
+.feature__name {
+	color: #6C94FF;
+}
+
+.peeko-points {
+	color: #ff9c00;
 }
