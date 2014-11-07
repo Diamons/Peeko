@@ -29,8 +29,7 @@ use Guzzle\Service\Description\ServiceDescription;
 class CloudSearchDomainClientBuilder extends ClientBuilder
 {
     protected static $commonConfigDefaults = array(
-        'scheme'           => 'https',
-        'signature.ignore' => true
+        Options::SCHEME => 'https',
     );
 
     public function build()
@@ -52,14 +51,19 @@ class CloudSearchDomainClientBuilder extends ClientBuilder
             )));
         }
 
+        // Determine the region from the endpoint
+        $endpoint = Url::factory($config->get(Options::BASE_URL));
+        list(,$region) = explode('.', $endpoint->getHost());
+        $config[Options::REGION] = $config[Options::SIGNATURE_REGION] = $region;
+
         // Create dependencies
         $exceptionParser = new JsonQueryExceptionParser();
-        $signature = new SignatureV4();
-        $credentials = new Credentials('','');
         $description = ServiceDescription::factory(sprintf(
             $config->get(Options::SERVICE_DESCRIPTION),
             $config->get(Options::VERSION)
         ));
+        $signature = $this->getSignature($description, $config);
+        $credentials = $this->getCredentials($config);
 
         // Resolve backoff strategy
         $backoff = $config->get(Options::BACKOFF);
@@ -69,10 +73,10 @@ class CloudSearchDomainClientBuilder extends ClientBuilder
                 new TruncatedBackoffStrategy(3,
                     // Retry failed requests with 400-level responses due to throttling
                     new ThrottlingErrorChecker($exceptionParser,
-                        // Retry failed requests with 500-level responses
-                        new HttpBackoffStrategy(array(500, 503, 509),
-                            // Retry failed requests due to transient network or cURL problems
-                            new CurlBackoffStrategy(null,
+                        // Retry failed requests due to transient network or cURL problems
+                        new CurlBackoffStrategy(null,
+                            // Retry failed requests with 500-level responses
+                            new HttpBackoffStrategy(array(500, 503, 509),
                                 new ExponentialBackoffStrategy()
                             )
                         )

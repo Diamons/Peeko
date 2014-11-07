@@ -16,17 +16,27 @@
 			<a href="/" id="logo">
 				<img src="/peeko-logo-alt.png" />
 			</a>
+			<form class="peeko-signup">
+				<div class="peeko-special">
+					The new version of Peeko is launching December 2015.<br />
+					Signup for early access and get $6 to spend.
+				</div>
+				<div class="peeko-signup__fields">
+					<input type="text" class="btn--transparent" value="" placeholder="E-mail address" />
+					<input type="submit" class="submit--transparent" value="Signup" />
+				</div>
+			</form>
 			<p class="peeko-story">
-				We've introduced several new features and improvements in our upcoming version of Peeko.
+				Peeko is a new way to do lunch. Restaurants on Peeko offer instant deals so you can always try something new. Every restaurant on the app supports mobile payments and online ordering so you never have to waste time looking for cash or waiting.
 			</p>
-
 			<div class="features">
 				<div class="feature clearfix">
 					<div class="feature__icon">
 						<span class="glyphicon glyphicon-gift"></span>
 					</div>
 					<div class="feature__info">
-						<span class="feature__name">Peeko Offers</span> lets you use exclusive offers and try thousands of new local businesses for free. No coupons to print or vouchers to purchase ahead of time.
+						<div class="feature__name">Instant Offers</div>
+						Every store has a deal you can use without having to schedule or print out in advance. Just show the offer and try something new today.
 					</div>
 				</div>
 				<div class="feature clearfix">
@@ -34,7 +44,8 @@
 						<span class="glyphicon glyphicon-credit-card"></span>
 					</div>
 					<div class="feature__info">
-						<span class="feature__name">Peeko Wallet</span> is the most convenient way to pay on the Peeko Shopping Network. Earn <span class="peeko-points">Peeko Points</span> while shopping on the Peeko Shopping Network.
+						<div class="feature__name">Mobile Payments</div>
+						Use your phone to make payments using Peeko Wallet and help keep your credit cards safe. Businesses never get to see your payment information and instead receive an instant payment from Peeko.
 					</div>
 				</div>
 				<div class="feature clearfix">
@@ -42,7 +53,8 @@
 						<span class="glyphicon glyphicon-star-empty"></span>
 					</div>
 					<div class="feature__info">
-					<span class="feature__name peeko-points">Peeko Points</span> can be used to get free prizes like gift cards, drinks, and more. Collect <span class="peeko-points">Peeko Points</span> to unlock higher level Peeko Offers.
+						<div class="feature__name">Earn Rewards</div>
+						Earn <span class="peeko-points">Peeko Points</span> for transactions, leaving helpful comments, submitting tips, and more. Redeem them for cool prizes like movie tickets, tshirts, gadgets, and more.
 					</div>
 				</div>
 				<div class="feature clearfix">
@@ -50,7 +62,8 @@
 						<span class="glyphicon glyphicon-shopping-cart"></span>
 					</div>
 					<div class="feature__info">
-					<span class="feature__name">Peeko Takeout</span> lets you order food and even split the bill with a friend through our app. Get notified automatically when your order is ready.
+					<div class="feature__name">Online Orders</div>
+						Order on your phone and pickup at the store. We don't charge businesses any fees for this service so you know you're helping support local businesses when using Peeko.
 					</div>
 				</div>
 			</div>
@@ -59,7 +72,7 @@
 	</div>
 {{ HTML::script('http://code.jquery.com/jquery-2.1.0.min.js'); }}
 {{ HTML::script('//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'); }}
-@yield('footerscripts')
+{{ HTML::script('/js/vendor/jquery.validate.min.js'); }}
 <script type="text/javascript">
   window.heap=window.heap||[];heap.load=function(a){window._heapid=a;var b=document.createElement("script");b.type="text/javascript",b.async=!0,b.src=("https:"===document.location.protocol?"https:":"http:")+"//cdn.heapanalytics.com/js/heap.js";var c=document.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c);var d=function(a){return function(){heap.push([a].concat(Array.prototype.slice.call(arguments,0)))}},e=["identify","track"];for(var f=0;f<e.length;f++)heap[e[f]]=d(e[f])};
   heap.load("1094769445");

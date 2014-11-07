@@ -7,9 +7,9 @@
 		"laravel/framework": "4.1.*",
 		"phpunit/phpunit": "4.0.*",
 		"way/database": "dev-master",
+		"hugofirth/mailchimp": "2.0.*",
 		"aws/aws-sdk-php-laravel": "1.*",
-		"cviebrock/image-validator": "1.0.*",
-		"way/database": "dev-master"
+		"cviebrock/image-validator": "1.0.*"
 	},
 	"autoload": {
 		"classmap": [

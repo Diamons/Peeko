@@ -95,6 +95,7 @@ $app = array(
 
 		'Aws\Laravel\AwsServiceProvider',
 		//'Cviebrock\ImageValidator\ImageValidatorServiceProvider',
+		'Hugofirth\Mailchimp\MailchimpServiceProvider',
 		'Illuminate\Foundation\Providers\ArtisanServiceProvider',
 		'Illuminate\Auth\AuthServiceProvider',
 		'Illuminate\Cache\CacheServiceProvider',
@@ -173,7 +174,8 @@ $app = array(
 		'Lang'            => 'Illuminate\Support\Facades\Lang',
 		'Log'             => 'Illuminate\Support\Facades\Log',
 		'Mail'            => 'Illuminate\Support\Facades\Mail',
-		'PeekoModel'	  => 'Way\Database\Model',
+		'MailchimpWrapper' => 'Hugofirth\Mailchimp\Facades\MailchimpWrapper',
+		'PeekoModel'			=> 'Way\Database\Model',
 		'Paginator'       => 'Illuminate\Support\Facades\Paginator',
 		'Password'        => 'Illuminate\Support\Facades\Password',
 		'Queue'           => 'Illuminate\Support\Facades\Queue',

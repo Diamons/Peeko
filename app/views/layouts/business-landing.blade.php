@@ -256,7 +256,7 @@
             </div> <!-- end price table-->
             </div>
         </div>
-          <div class="client-say">
+          <!-- <div class="client-say">
             <div class='col-md-12 col-lg-12'>
               <h2>Clients say</h2>
             </div>
@@ -298,7 +298,7 @@
               </div>
             </div>
           </div>
-
+ -->
            <!-- <div class='devider'></div> -->
             
             <div class="container hidden">

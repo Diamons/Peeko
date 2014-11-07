@@ -19,6 +19,7 @@ Route::get('/', function()
 */
 
 Route::get('/', 'HomeController@showWelcome');
+Route::post('/subscribe', 'HomeController@postSubscribeEmail');
 Route::get('/queenstechmeetup', 'HomeController@getQueensTechMeetup');
 
 Route::controller('business', 'BusinessController');

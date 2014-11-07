@@ -1,6 +1,101 @@
 CHANGELOG
 =========
 
+2.7.1 (2014-10-16)
+------------------
+
+* Updated the Amazon RDS client to the 2014-09-01 API version.
+* Added support for advanced Japanese language processing to the Amazon
+  CloudSearch client.
+
+2.7.0 (2014-10-08)
+------------------
+
+* Added document model support to the Amazon DynamoDB client, including support
+  for the new data types (`L`, `M`, `BOOL`, and `NULL`), nested attributes, and
+  expressions.
+* Deprecated the `Aws\DynamoDb\Model\Attribute`, `Aws\DynamoDb\Model\Item`,
+  and `Aws\DynamoDb\Iterator\ItemIterator` classes, and the
+  `Aws\DynamoDb\DynamoDbClient::formatValue` and
+  `Aws\DynamoDb\DynamoDbClient::formatAttribute` methods, since they do not
+  support the new types in the DynamoDB document model. These deprecated classes
+  and methods still work reliably with `S`, `N`, `B`, `SS`, `NS`, and `BS`
+  attributes.
+* Updated the Amazon DynamoDB client to permanently disable client-side
+  parameter validation. This needed to be done in order to support the new
+  document model features.
+* Updated the Amazon EC2 client to sign requests with Signature V4.
+* Fixed an issue in the S3 service description to make the `VersionId`
+  work in `S3Client::restoreObject`.
+
+2.6.16 (2014-09-11)
+-------------------
+
+* Added support for tagging to the Amazon Kinesis client.
+* Added support for setting environment variables to the AWS OpsWorks client.
+* Fixed issue #334 to allow the `before_upload` callback to work in the
+  `S3Client::upload` method.
+* Fixed an issue in the Signature V4 signer that was causing an issue with some
+  CloudSearch Domain operations.
+
+2.6.15 (2014-08-14)
+-------------------
+
+* Added support for signing requests to the Amazon CloudSearch Domain client.
+* Added support for creating anonymous clients.
+
+2.6.14 (2014-08-11)
+-------------------
+
+* Added support for tagging to the Elastic Load Balancing client.
+
+2.6.13 (2014-07-31)
+-------------------
+
+* Added support for configurable idle timeouts to the Elastic Load Balancing
+  client.
+* Added support for Lifecycle Hooks, Detach Instances, and Standby to the
+  AutoScaling client.
+* Added support for creating Amazon ElastiCache for Memcached clusters with
+  nodes in multiple availability zones.
+* Added minor fixes to the Amazon EC2 model for ImportVolume,
+  DescribeNetworkInterfaceAttribute, and DeleteVpcPeeringConnection
+* Added support for getGeoLocation and listGeoLocations to the
+  Amazon Route 53 client.
+* Added support for Amazon Route 53 Domains.
+* Fixed an issue with deleting nested folders in the Amazon S3 stream wrapper.
+* Fixed an issue with the Amazon S3 sync abstraction to ensure that S3->S3
+  communication works correctly.
+* Added stricter validation to the Amazon SNS MessageValidator.
+
+2.6.12 (2014-07-16)
+-------------------
+
+* Added support for adding attachments to support case communications to the
+  AWS Support API client.
+* Added support for credential reports and password rotation features to the
+  AWS IAM client.
+* Added the `ap-northeast-1`, `ap-southeast-1`, and `ap-southeast-2` regions to
+  the Amazon Kinesis client.
+* Added a `listFilter` stream context option that can be used when using
+  `opendir()` and the Amazon S3 stream wrapper. This option is used to filter
+  out specific objects from the files yielded from the stream wrapper.
+* Fixed #322 so that the download sync builder ignores objects that have a
+  `GLACIER` storage class.
+* Fixed an issue with the S3 SSE-C logic so that HTTPS is only required when
+  the SSE-C parameters are provided.
+* Updated the Travis configuration to include running HHVM tests.
+
+2.6.11 (2014-07-09)
+-------------------
+
+* Added support for **Amazon Cognito Identity**.
+* Added support for **Amazon Cognito Sync**.
+* Added support for **Amazon CloudWatch Logs**.
+* Added support for editing existing health checks and associating health checks
+  with tags to the Amazon Route 53 client.
+* Added the ModifySubnetAttribute operation to the Amazon EC2 client.
+
 2.6.10 (2014-07-02)
 -------------------
 

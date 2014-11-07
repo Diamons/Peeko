@@ -1,0 +1,152 @@
+@import "compass";
+$color-orange: #FFC966;
+
+html, body {
+	height: 100%;
+}
+body {
+	background: url(/img/peeko4-bg.jpg) #000 no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	color: #DDD;
+	font-size: 12px;
+	font-family: Quicksand, sans-serif;
+}
+
+#container {
+	height: 100%;
+}
+
+#logo img{
+	max-width: 160px;
+	height: auto;
+	margin: 20px auto 20px;
+	display: block;
+}
+
+.peeko-story {
+	padding: 20px;
+	margin-top: 25px;
+}
+
+.peeko-main {
+	min-height: 100%;
+	width: 640px;
+	border: 1px solid #363E62;
+	font-size: 14px;
+	padding: 40px 0;
+	margin: 0 auto 60px auto;
+	background: rgba(219, 56, 56, 0.9);
+}
+
+.peeko-signup {
+	background: rgba(0, 0, 0, .3);
+	border: 1px solid #000;
+	border-width: 1px 0;
+	padding: 10px 20px 15px 20px;
+}
+.peeko-special {
+	color: #FFF;
+	font-size: 14px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.features {
+	font-size: 12px;
+	margin-top: 0;
+}
+
+.feature {
+	@include transition(all .4s);
+	padding-bottom: 15px;
+	padding-top: 10px;
+	border-bottom: 1px dashed #000;
+	
+	&:hover {
+		@include box-shadow(0 8px 10px 0px #000);
+	}
+	&:last-child {
+		border: none;
+	}
+}
+.features .feature__icon {
+	color: #FFF;
+	float: left;
+	width: 20%;
+	font-size: 24px;
+	display: block;
+	text-align: center;
+	margin: auto;
+}
+
+.features .feature__icon .glyphicon {
+	vertical-align: middle;
+}
+
+.feature__info {
+	float: left;
+	padding-right: 20px;
+	width: 80%;
+	font-size: 14px;
+}
+.feature__name {
+	color: $color-orange;
+	display: block;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 12px;
+}
+
+.peeko-points {
+	color: #00FFFF;
+}
+
+.peeko-signup__fields {
+	position: relative;
+	border: 2px solid #333;
+	@include border-radius(5px);
+	@include transition(all 1s);
+	overflow: hidden;
+	
+	&:focus {
+		border-color: #139DFF;
+	}
+
+	.btn--transparent {
+	 	@include appearance(none);
+	 	background: rgba(0, 0, 0, .4);
+	 	border: none;
+	 	color: #FFFFFF;
+	 	padding: 10px;
+	 	font-size: 11px;
+
+	 	display: block;
+	 	width: 100%;
+	 	font-weight: 400;
+	 	text-transform: uppercase;
+	 	letter-spacing: 2px;
+	 	padding-right: 80px;
+	 	&:focus {
+	 		outline: none;
+	 	}
+	 }
+
+	.submit--transparent {
+		@include appearance(none);
+		background: #4456a2;
+		border: none;
+		padding: 0 10px;
+		position: absolute;
+		border-left: none;
+		height: 100%;
+		top: 0;
+		right: 0;
+		@include transition(all 1s);
+
+		&:focus {
+	 		outline: none;
+	 		background: #95c313;
+	 	}
+	}
+}

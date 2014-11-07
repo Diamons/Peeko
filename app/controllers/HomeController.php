@@ -17,11 +17,15 @@ class HomeController extends BaseController {
 
 	protected $layout = "layouts.default";
 
-	public function showWelcome()
-	{	
-		$title = "Home";
+	public function showWelcome() {	
+		$title = "Home2";
 		View::share('title', $title);
 		$this->layout->content = View::make('home'); //View::make('greeting')->withName('Shahruk');
+	}
+
+	public function postSubscribeEmail() {
+		echo "A";
+		die();
 	}
 
 	public function getQueensTechMeetup(){

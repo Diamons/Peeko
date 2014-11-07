@@ -42,15 +42,10 @@ if (get_cfg_var('CONFIG')) {
 
 // Set the service configuration file if it was not provided from the CLI
 if (!isset($_SERVER['CONFIG'])) {
-    $serviceConfig = $_SERVER['CONFIG'] = dirname(__DIR__) . '/test_services.json';
-    $_SERVER['CONFIG'] = $serviceConfig;
-    if (!file_exists($serviceConfig)) {
-        copy($serviceConfig . '.dist', $serviceConfig);
+    $serviceConfig = dirname(__DIR__) . '/test_services.json';
+    if (file_exists($serviceConfig)) {
+        $_SERVER['CONFIG'] = $serviceConfig;
     }
-}
-
-if (!is_readable($_SERVER['CONFIG'])) {
-    die("Unable to read service configuration from '{$_SERVER['CONFIG']}'\n");
 }
 
 // If the global prefix is hostname, then use the crc32() of gethostname()
@@ -59,7 +54,7 @@ if (!isset($_SERVER['PREFIX']) || $_SERVER['PREFIX'] == 'hostname') {
 }
 
 // Instantiate the service builder
-$aws = Aws\Common\Aws::factory($_SERVER['CONFIG']);
+$aws = Aws\Common\Aws::factory(isset($_SERVER['CONFIG']) ? $_SERVER['CONFIG'] : 'test_services.dist.json');
 
 // Turn on wire logging if configured
 $aws->getEventDispatcher()->addListener('service_builder.create_client', function (\Guzzle\Common\Event $event) {
@@ -73,3 +68,17 @@ Guzzle\Tests\GuzzleTestCase::setServiceBuilder($aws);
 
 // Emit deprecation warnings
 Guzzle\Common\Version::$emitWarnings = true;
+
+function can_mock_internal_classes()
+{
+    switch (substr(PHP_VERSION, 0, 3)) {
+        case '5.3.':
+            return true;
+        case '5.4.':
+            return version_compare(PHP_VERSION, '5.4.30', '<');
+        case '5.5.':
+            return version_compare(PHP_VERSION, '5.5.14', '<');
+        default:
+            return false;
+    }
+}

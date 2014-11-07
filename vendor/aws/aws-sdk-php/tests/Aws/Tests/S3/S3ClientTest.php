@@ -81,8 +81,11 @@ class S3ClientTest extends \Guzzle\Tests\GuzzleTestCase
      */
     public function testCreatesPresignedUrls()
     {
-        /** @var $client S3Client */
-        $client = $this->getServiceBuilder()->get('s3', true);
+        $client = S3Client::factory(array(
+            'region' => 'us-east-1',
+            'key'    => 'foo',
+            'secret' => 'bar'
+        ));
         $request = $client->get('/foobar');
         $original = (string) $request;
         $url = $client->createPresignedUrl($request, 1342138769);
@@ -97,8 +100,11 @@ class S3ClientTest extends \Guzzle\Tests\GuzzleTestCase
      */
     public function testCreatesPresignedUrlsWithSpecialCharacters()
     {
-        /** @var $client S3Client */
-        $client = $this->getServiceBuilder()->get('s3', true);
+        $client = S3Client::factory(array(
+            'region' => 'us-east-1',
+            'key'    => 'foo',
+            'secret' => 'bar'
+        ));
         $request = $client->get('/foobar test: abc/+%.a');
         $url = $client->createPresignedUrl($request, 1342138769);
         $this->assertContains('https://s3.amazonaws.com/foobar%20test%3A%20abc/%2B%25.a?AWSAccessKeyId=', $url);
@@ -324,11 +330,14 @@ class S3ClientTest extends \Guzzle\Tests\GuzzleTestCase
             's3/complete_multipart_upload'
         ));
         $history = new HistoryPlugin();
+        $called = false;
         $client->addSubscriber($history);
         $result = $client->upload('test', 'key', fopen(__FILE__, 'r'), 'public-read', array(
             'min_part_size' => 4,
-            'params'        => array('Metadata' => array('Foo' => 'Bar'))
+            'params'        => array('Metadata' => array('Foo' => 'Bar')),
+            'before_upload' => function () use (&$called) {$called = true;},
         ));
+        $this->assertTrue($called);
         $this->assertInstanceOf('Guzzle\Service\Resource\Model', $result);
         $this->assertCount(3, $history);
         $request = $history->getLastRequest();
