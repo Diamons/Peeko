@@ -18,7 +18,7 @@
 			</a>
 			<form class="peeko-signup">
 				<div class="peeko-special">
-					The new version of Peeko is launching December 2015.<br />
+					The new version of Peeko 4 is launching December 2015.<br />
 					Signup for early access and get $6 to spend. 
 				</div>
 				<div class="peeko-signup__fields">
