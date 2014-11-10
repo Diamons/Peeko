@@ -19,7 +19,7 @@
 			<form class="peeko-signup">
 				<div class="peeko-special">
 					The new version of Peeko is launching December 2015.<br />
-					Signup for early access and get $6 to spend.
+					Signup for early access and get $6 to spend. 
 				</div>
 				<div class="peeko-signup__fields">
 					<input type="text" class="btn--transparent" value="" placeholder="E-mail address" />
