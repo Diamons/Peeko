@@ -27,7 +27,7 @@
 				</div>
 			</form>
 			<p class="peeko-story">
-				Peeko is a new way to do lunch. Restaurants on Peeko offer instant deals so you can always try something new. Every restaurant on the app supports mobile payments and online ordering so you never have to waste time looking for cash or waiting.
+				Peeko 4 is a new way to do lunch. Restaurants on Peeko offer instant deals so you can always try something new. Every restaurant on the app supports mobile payments and online ordering so you never have to waste time looking for cash or waiting.
 			</p>
 			<div class="features">
 				<div class="feature clearfix">
